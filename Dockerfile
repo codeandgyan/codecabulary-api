@@ -5,7 +5,10 @@ WORKDIR /usr/src/app
 
 COPY package.json ./
 
-RUN npm install --global yarn
+# Check if yarn is already installed
+RUN if [ ! -x "$(command -v yarn)" ]; then \
+        npm install --global yarn; \
+    fi
 
 RUN yarn install
 
@@ -17,6 +20,11 @@ RUN yarn build
 FROM node:18-alpine
 
 WORKDIR /usr/src/app
+
+# Check if yarn is already installed
+RUN if [ ! -x "$(command -v yarn)" ]; then \
+        npm install --global yarn; \
+    fi
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}

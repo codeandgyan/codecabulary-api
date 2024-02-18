@@ -1,4 +1,5 @@
 export class ArticleDTO {
+  readonly _id: string;
   readonly category: string;
   readonly tags: string;
   readonly title: string;

@@ -38,6 +38,11 @@ export class ArticleService {
     return result;
   }
 
+  async addMany(articles: Article[]): Promise<number> {
+    const result = await this.articleModel.insertMany(articles);
+    return result.entries.length;
+  }
+
   async findById(id: string): Promise<Article> {
     const result = await this.articleModel.findById(id);
     return result;
@@ -46,5 +51,10 @@ export class ArticleService {
   async deleteById(id: string): Promise<Article> {
     const result = await this.articleModel.findByIdAndDelete(id);
     return result;
+  }
+
+  async deleteAll(): Promise<number> {
+    const result = await this.articleModel.deleteMany({});
+    return result.deletedCount;
   }
 }

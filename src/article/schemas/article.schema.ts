@@ -16,6 +16,8 @@ export class Example {
 //   id: true,
 })
 export class Article {
+  _id: string;
+
   @Prop({ isRequired: true })
   category: string;
 

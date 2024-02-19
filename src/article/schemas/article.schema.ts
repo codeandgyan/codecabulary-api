@@ -12,8 +12,17 @@ export class Example {
   description: string;
 }
 
+@Schema()
+export class Analogy {
+  @Prop({ isRequired: true })
+  para1: string;
+
+  @Prop({ isRequired: true })
+  para2: string;
+}
+
 @Schema({
-//   id: true,
+  //   id: true,
 })
 export class Article {
   _id: string;
@@ -32,6 +41,9 @@ export class Article {
 
   @Prop({ type: Example })
   example: Example;
+
+  @Prop({ type: Analogy })
+  analogies: Analogy;
 }
 
 export const ArticleSchema = SchemaFactory.createForClass(Article);

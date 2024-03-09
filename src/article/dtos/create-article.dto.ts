@@ -1,8 +1,8 @@
 export class ArticleDTO {
   readonly _id: string;
-  readonly category: string;
+  readonly topic: string;
   readonly tags: string;
-  readonly title: string;
+  readonly concept: string;
   readonly explanation: string;
   readonly example: ExampleDTO;
   readonly analogies: AnalogyDTO;

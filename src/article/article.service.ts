@@ -20,7 +20,7 @@ export class ArticleService {
 
     const keyword = query.keyword
       ? {
-          title: {
+          concepts: {
             $regex: query.keyword,
             $options: 'i',
           },

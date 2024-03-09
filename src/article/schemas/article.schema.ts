@@ -28,13 +28,13 @@ export class Article {
   _id: string;
 
   @Prop({ isRequired: true })
-  category: string;
+  topic: string;
 
   @Prop()
   tags: string;
 
   @Prop({ isRequired: true })
-  title: string;
+  concept: string;
 
   @Prop({ isRequired: true })
   explanation: string;

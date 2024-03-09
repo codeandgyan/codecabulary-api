@@ -1,0 +1,1291 @@
+{
+  "articles": [
+    {
+      "concept": "Variables",
+      "topic": "JavaScript",
+      "explanation": "Containers for storing data values. They can hold various types of data such as numbers, strings, or objects.",
+      "example": {
+        "snippet": "let name = 'John';\nlet age = 30;",
+        "description": "In this example, variables 'name' and 'age' are assigned string and number values respectively."
+      }
+    },
+    {
+      "concept": "const vs let vs var",
+      "topic": "JavaScript",
+      "explanation": "const, let, and var are used to declare variables in JavaScript. 'const' declares a constant variable whose value cannot be reassigned. 'let' declares a block-scoped variable that can be reassigned. 'var' declares a variable with function scope or global scope.",
+      "example": {
+        "snippet": "// const vs let vs var example\nconst constantValue = 10;\nlet mutableValue = 20;\nvar legacyValue = 30;\n\nconsole.log(constantValue); // Output: 10\nconsole.log(mutableValue); // Output: 20\nconsole.log(legacyValue); // Output: 30\n\nmutableValue = 40;\nconsole.log(mutableValue); // Output: 40\n\n// Block-scoping with let\nif (true) {\n  let blockScopedValue = 50;\n  console.log(blockScopedValue); // Output: 50\n}\n// console.log(blockScopedValue); // Throws ReferenceError\n\n// Function-scoping with var\nfunction test() {\n  var functionScopedValue = 60;\n  console.log(functionScopedValue); // Output: 60\n}\ntest();\nconsole.log(functionScopedValue); // Output: 60",
+        "description": "This example illustrates the usage and behavior of 'const', 'let', and 'var' for variable declaration, scoping, and reassignment in JavaScript."
+      }
+    },
+    {
+      "concept": "Data Types",
+      "topic": "JavaScript",
+      "explanation": "JavaScript has several data types including numbers, strings, booleans, arrays, and objects, used to represent different kinds of data.",
+      "example": {
+        "snippet": "let num = 10;\nlet str = 'Hello';\nlet bool = true;\nlet arr = [1, 2, 3];\nlet obj = {name: 'John', age: 30};",
+        "description": "In this example, variables represent different data types: number, string, boolean, array, and object."
+      }
+    },
+    {
+      "concept": "Primitive values",
+      "topic": "JavaScript",
+      "explanation": "Primitive values in JavaScript are immutable data types that are not objects and have no methods. They include undefined, null, boolean, number, string, and symbol.",
+      "example": {
+        "snippet": "// Primitive values example\nconst num = 10;\nconst str = 'Hello';\nconsole.log(typeof num); // Output: 'number'\nconsole.log(typeof str); // Output: 'string'",
+        "description": "This example demonstrates primitive values such as number and string in JavaScript."
+      }
+    },
+    {
+      "concept": "Functions",
+      "topic": "JavaScript",
+      "explanation": "Blocks of reusable code designed to perform a specific task. They can take parameters and return values.",
+      "example": {
+        "snippet": "function greet(name) {\n  return 'Hello, ' + name + '!';\n}\nlet message = greet('John');",
+        "description": "In this example, the 'greet' function takes a 'name' parameter and returns a greeting message using string concatenation."
+      }
+    },
+    {
+      "concept": "Conditional Statements",
+      "topic": "JavaScript",
+      "explanation": "Statements that perform different actions based on whether a condition is true or false. Common constructs include if, else if, and else.",
+      "example": {
+        "snippet": "let num = 10;\nif (num > 0) {\n  console.log('Positive');\n} else if (num < 0) {\n  console.log('Negative');\n} else {\n  console.log('Zero');\n}",
+        "description": "In this example, the code checks if 'num' is positive, negative, or zero, and logs the corresponding message."
+      }
+    },
+    {
+      "concept": "Loops",
+      "topic": "JavaScript",
+      "explanation": "Structures that repeat a block of code multiple times until a condition is met. Common types include for loops, while loops, and do-while loops.",
+      "example": {
+        "snippet": "for (let i = 0; i < 5; i++) {\n  console.log(i);\n}",
+        "description": "In this example, a for loop iterates from 0 to 4, logging each value of 'i'."
+      }
+    },
+    {
+      "concept": "Arrays",
+      "topic": "JavaScript",
+      "explanation": "Ordered collections of data items, each identified by an index. They can contain elements of any data type.",
+      "example": {
+        "snippet": "let colors = ['red', 'green', 'blue'];\nconsole.log(colors[0]); // Output: 'red'",
+        "description": "In this example, 'colors' is an array containing strings. 'colors[0]' accesses the first element, 'red'."
+      }
+    },
+    {
+      "concept": "Objects",
+      "topic": "JavaScript",
+      "explanation": "Collections of key-value pairs where each key is a string and each value can be any data type.",
+      "example": {
+        "snippet": "let person = {\n  name: 'John',\n  age: 30\n};\nconsole.log(person.name); // Output: 'John'",
+        "description": "In this example, 'person' is an object with 'name' and 'age' properties. 'person.name' accesses the value 'John'."
+      }
+    },
+    {
+      "concept": "Operators",
+      "topic": "JavaScript",
+      "explanation": "Symbols that perform operations on variables or values. Types include arithmetic, assignment, comparison, logical, and more.",
+      "example": {
+        "snippet": "let x = 10 + 5;\nlet y = x > 10 ? 'greater' : 'smaller';",
+        "description": "In this example, 'x' is assigned the result of an addition operation. 'y' is assigned based on a ternary comparison."
+      }
+    },
+    {
+      "concept": "Comparison Operators",
+      "topic": "JavaScript",
+      "explanation": "Comparison operators are used to compare two values and return a Boolean value indicating whether the comparison is true or false.",
+      "example": {
+        "snippet": "// Comparison operators example\nlet a = 5;\nlet b = 10;\nconsole.log(a > b); // Output: false\nconsole.log(a < b); // Output: true\nconsole.log(a === b); // Output: false (strict equality)\nconsole.log(a !== b); // Output: true (strict inequality)",
+        "description": "In this example, various comparison operators like greater than (>), less than (<), strict equality (===), and strict inequality (!==) are used to compare values of variables 'a' and 'b'."
+      }
+    },
+    {
+      "concept": "Strict equality (===)",
+      "topic": "JavaScript",
+      "explanation": "Strict equality (===) is an equality operator in JavaScript that compares both the value and the data type of two operands. It returns true if the operands are equal without type conversion, otherwise returns false.",
+      "example": {
+        "snippet": "// Strict equality example\nconsole.log(5 === 5); // Output: true\nconsole.log(5 === '5'); // Output: false",
+        "description": "This example demonstrates the strict equality operator (===), comparing both the value and data type of operands."
+      }
+    },
+    {
+      "concept": "Strict inequality (!==)",
+      "topic": "JavaScript",
+      "explanation": "Strict inequality (!==) is the negation of strict equality in JavaScript. It checks if two operands are not equal in value or not equal in data type, returning true if they are not equal without type conversion, otherwise returns false.",
+      "example": {
+        "snippet": "// Strict inequality example\nconsole.log(5 !== 10); // Output: true\nconsole.log(5 !== '5'); // Output: true",
+        "description": "This example illustrates the usage of the strict inequality operator (!==) to check for inequality without type conversion."
+      }
+    },
+    {
+      "concept": "Ternary Operator",
+      "topic": "JavaScript",
+      "explanation": "The ternary operator is a short-hand version of an 'if...else' statement, allowing for conditional execution in a concise manner.",
+      "example": {
+        "snippet": "// Ternary operator example\nlet num = 5;\nlet result = (num % 2 === 0) ? 'Even' : 'Odd';\nconsole.log(result); // Output: 'Odd'",
+        "description": "In this example, the ternary operator is used to determine if 'num' is even or odd, and assigns the result to the 'result' variable."
+      }
+    },
+    {
+      "concept": "Optional Chaining (?),",
+      "topic": "JavaScript",
+      "explanation": "Optional chaining is a feature introduced in ES2020 that allows you to safely access nested properties of an object without having to explicitly check if each property exists. If a property in the chain is null or undefined, the expression short-circuits and returns undefined.",
+      "example": {
+        "snippet": "// Optional Chaining example\nconst person = {\n  name: 'John',\n  address: {\n    city: 'New York'\n  }\n};\nconsole.log(person.address?.street?.name); // Output: undefined (no error thrown)",
+        "description": "This example demonstrates optional chaining by safely accessing nested properties of the 'person' object without causing an error."
+      }
+    },
+    {
+      "concept": "Nullish coalescing operator (??)",
+      "topic": "JavaScript",
+      "explanation": "The nullish coalescing operator (??) is a logical operator introduced in ES2020 that returns its right-hand operand when its left-hand operand is null or undefined, otherwise it returns the left-hand operand.",
+      "example": {
+        "snippet": "// Nullish coalescing operator example\nconst name = null;\nconst defaultName = 'Guest';\nconsole.log(name ?? defaultName); // Output: 'Guest'",
+        "description": "This example demonstrates the usage of the nullish coalescing operator to provide a default value when the variable 'name' is null or undefined."
+      }
+    },
+    {
+      "concept": "Nullish coalescing assignment (??=)",
+      "topic": "JavaScript",
+      "explanation": "Nullish coalescing assignment (??=) is an assignment operator introduced in ES2021 that assigns a value to a variable only if the variable is null or undefined.",
+      "example": {
+        "snippet": "// Nullish coalescing assignment example\nlet x;\nx ??= 10;\nconsole.log(x); // Output: 10\nx ??= 20;\nconsole.log(x); // Output: 10",
+        "description": "This example demonstrates the usage of nullish coalescing assignment to assign a default value to a variable only if it is null or undefined."
+      }
+    },
+    {
+      "concept": "DOM Manipulation",
+      "topic": "JavaScript",
+      "explanation": "Document Object Model (DOM) manipulation involves modifying the structure, content, or style of a web page in response to user interactions or other events.",
+      "example": {
+        "snippet": "// HTML: <div id='output'></div>\nlet output = document.getElementById('output');\noutput.textContent = 'Hello, World!';",
+        "description": "In this example, the content of a div element with the id 'output' is changed to 'Hello, World!' using JavaScript."
+      }
+    },
+    {
+      "concept": "Event Handling",
+      "topic": "JavaScript",
+      "explanation": "The process of defining and managing code that should be executed in response to user actions or other events occurring in a web application.",
+      "example": {
+        "snippet": "// HTML: <button id='btn'>Click Me</button>\nlet btn = document.getElementById('btn');\nbtn.addEventListener('click', function() {\n  alert('Button clicked!');\n});",
+        "description": "In this example, an event listener is added to a button element. When clicked, it triggers an alert message."
+      }
+    },
+    {
+      "concept": "Scope",
+      "topic": "JavaScript",
+      "explanation": "Defines the visibility and accessibility of variables. JavaScript has global scope, function scope, and block scope.",
+      "example": {
+        "snippet": "let globalVar = 'I am global';\nfunction myFunction() {\n  let localVar = 'I am local';\n  console.log(globalVar);\n}\nconsole.log(localVar); // Error: localVar is not defined",
+        "description": "In this example, 'globalVar' is accessible both globally and within 'myFunction', while 'localVar' is only accessible within 'myFunction'."
+      }
+    },
+    {
+      "concept": "Object Literals",
+      "topic": "JavaScript",
+      "explanation": "Object literals, also known as object initializer, are a convenient way of creating objects in JavaScript using key-value pairs enclosed in curly braces.",
+      "example": {
+        "snippet": "// Object literals example\nlet person = {\n  name: 'John',\n  age: 30,\n  greet: function() {\n    console.log('Hello, my name is ' + this.name);\n  }\n};\nperson.greet(); // Output: 'Hello, my name is John'",
+        "description": "In this example, 'person' object is created using object literal notation with properties 'name', 'age', and 'greet' method."
+      }
+    },
+    {
+      "concept": "Control Flow",
+      "topic": "JavaScript",
+      "explanation": "Control flow refers to the order in which statements and instructions are executed in a program. It includes decision-making structures like if-else statements, loops, and function calls.",
+      "example": {
+        "snippet": "// Control flow example\nlet num = 10;\nif (num > 5) {\n  console.log('Greater than 5');\n} else {\n  console.log('Less than or equal to 5');\n}",
+        "description": "In this example, control flow is determined by the condition 'num > 5', executing different code based on the result."
+      }
+    },
+    {
+      "concept": "Closures",
+      "topic": "JavaScript",
+      "explanation": "Functions that retain access to variables from their containing scope even after the scope has closed. Useful for creating private variables and data encapsulation.",
+      "example": {
+        "snippet": "function outer() {\n  let count = 0;\n  return function inner() {\n    return ++count;\n  };\n}\nlet counter = outer();\nconsole.log(counter()); // Output: 1",
+        "description": "In this example, 'inner' function maintains access to the 'count' variable from its containing scope even after 'outer' function has finished executing."
+      }
+    },
+    {
+      "concept": "Higher-Order Functions",
+      "topic": "JavaScript",
+      "explanation": "Functions that can accept other functions as arguments or return functions as results. Common examples include map, filter, and reduce.",
+      "example": {
+        "snippet": "const numbers = [1, 2, 3, 4, 5];\nconst squaredNumbers = numbers.map(function(num) {\n  return num * num;\n});",
+        "description": "In this example, the map function is a higher-order function that accepts a function as an argument to square each number in the array."
+      }
+    },
+    {
+      "concept": "Promises",
+      "topic": "JavaScript",
+      "explanation": "Objects representing the eventual completion or failure of an asynchronous operation. They simplify handling of asynchronous operations.",
+      "example": {
+        "snippet": "const fetchData = () => {\n  return new Promise((resolve, reject) => {\n    // Asynchronous operation\n    setTimeout(() => {\n      resolve('Data fetched');\n    }, 2000);\n  });\n};",
+        "description": "In this example, a promise is created to simulate fetching data asynchronously. It resolves with 'Data fetched' after a delay."
+      }
+    },
+    {
+      "concept": "Async/Await",
+      "topic": "JavaScript",
+      "explanation": "Syntax for writing asynchronous code that looks synchronous. 'async' declares an asynchronous function, 'await' pauses execution until a promise is settled.",
+      "example": {
+        "snippet": "async function fetchData() {\n  const data = await fetchDataFromAPI();\n  console.log(data);\n}\nfetchData();",
+        "description": "In this example, the 'fetchData' function fetches data from an API using 'await', ensuring data is retrieved before proceeding."
+      }
+    },
+    {
+      "concept": "Modules",
+      "topic": "JavaScript",
+      "explanation": "Encapsulated units of code that can be reused across applications. ES6 introduced native support for modules using 'export' and 'import' statements.",
+      "example": {
+        "snippet": "// math.js\nexport const add = (a, b) => a + b;\n// main.js\nimport { add } from './math.js';\nconsole.log(add(2, 3)); // Output: 5",
+        "description": "In this example, 'add' function is exported from 'math.js' module and imported into 'main.js' for use."
+      }
+    },
+    {
+      "concept": "Error Handling",
+      "topic": "JavaScript",
+      "explanation": "Process of anticipating and responding to errors that occur during execution of a program. Common techniques include try-catch blocks and error objects.",
+      "example": {
+        "snippet": "try {\n  // Code that may throw an error\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.error(error);\n}",
+        "description": "In this example, a try-catch block is used to handle errors. If an error occurs, it's caught and logged to the console."
+      }
+    },
+    {
+      "concept": "Regular Expressions (RegEx)",
+      "topic": "JavaScript",
+      "explanation": "Patterns used to match character combinations in strings. They provide powerful search and replace functionality.",
+      "example": {
+        "snippet": "const pattern = /hello/;\nconst str = 'Hello, World!';\nconsole.log(pattern.test(str)); // Output: true",
+        "description": "In this example, a regular expression is used to test if the string contains the word 'hello'."
+      }
+    },
+    {
+      "concept": "Classes",
+      "topic": "JavaScript",
+      "explanation": "Blueprints for creating objects with predefined properties and methods. Introduced in ES6, they provide syntactical sugar over JavaScript's existing prototype-based inheritance.",
+      "example": {
+        "snippet": "class Rectangle {\n  constructor(width, height) {\n    this.width = width;\n    this.height = height;\n  }\n  area() {\n    return this.width * this.height;\n  }\n}\nconst rect = new Rectangle(5, 3);\nconsole.log(rect.area()); // Output: 15",
+        "description": "In this example, a 'Rectangle' class is defined with properties 'width' and 'height', and a method 'area' to calculate the area."
+      }
+    },
+    {
+      "concept": "Inheritance",
+      "topic": "JavaScript",
+      "explanation": "Mechanism by which one class can inherit properties and methods from another class. JavaScript supports prototypal inheritance.",
+      "example": {
+        "snippet": "class Animal {\n  speak() {\n    return 'Animal speaks';\n  }\n}\nclass Dog extends Animal {\n  bark() {\n    return 'Woof!';\n  }\n}\nconst dog = new Dog();\nconsole.log(dog.speak()); // Output: 'Animal speaks'",
+        "description": "In this example, 'Dog' class inherits the 'speak' method from 'Animal' class through inheritance."
+      }
+    },
+    {
+      "concept": "Map",
+      "topic": "JavaScript",
+      "explanation": "Data structure that stores key-value pairs and remembers the original insertion order of the keys.",
+      "example": {
+        "snippet": "let myMap = new Map();\nmyMap.set('name', 'John');\nmyMap.set('age', 30);\nconsole.log(myMap.get('name')); // Output: 'John'",
+        "description": "In this example, a map 'myMap' is created and populated with key-value pairs, and the value associated with the 'name' key is retrieved."
+      }
+    },
+    {
+      "concept": "Set",
+      "topic": "JavaScript",
+      "explanation": "Collection of unique values with no duplicates. Useful for storing a list of distinct items.",
+      "example": {
+        "snippet": "let mySet = new Set([1, 2, 2, 3, 3, 4]);\nconsole.log(mySet.size); // Output: 4",
+        "description": "In this example, a set 'mySet' is created with unique values. Duplicates are automatically removed."
+      }
+    },
+    {
+      "concept": "Arrow Functions",
+      "topic": "JavaScript",
+      "explanation": "A concise way to write function expressions in JavaScript, introduced in ES6, with implicit return and lexical 'this'.",
+      "example": {
+        "snippet": "let add = (a, b) => a + b;\nconsole.log(add(3, 5)); // Output: 8",
+        "description": "In this example, an arrow function 'add' takes two parameters and returns their sum."
+      }
+    },
+    {
+      "concept": "Template Literals",
+      "topic": "JavaScript",
+      "explanation": "Syntax for creating strings that allow embedded expressions and multiline strings, denoted by backticks (` `).",
+      "example": {
+        "snippet": "let name = 'John';\nconsole.log(`Hello, ${name}!`); // Output: 'Hello, John!'",
+        "description": "In this example, a template literal is used to create a greeting message with the variable 'name'."
+      }
+    },
+    {
+      "concept": "ES6 Tagged Template Literals",
+      "topic": "JavaScript",
+      "explanation": "A feature that allows modifying the output of template literals using a function called with the template literal's parts and expressions.",
+      "example": {
+        "snippet": "// Tagged template literals\nfunction tag(strings, ...values) {\n  console.log(strings); // Output: ['Hello, ', '!']\n  console.log(values); // Output: ['World']\n}\ntag`Hello, ${'World'}!`;",
+        "description": "In this example, 'tag' function processes the parts and values of the template literal."
+      }
+    },
+    {
+      "concept": "Destructuring",
+      "topic": "JavaScript",
+      "explanation": "Syntax that allows extracting values from arrays or objects and assigning them to variables in a concise manner.",
+      "example": {
+        "snippet": "// Array destructuring\nlet [a, b] = [1, 2];\nconsole.log(a, b); // Output: 1 2\n// Object destructuring\nlet {name, age} = {name: 'John', age: 30};\nconsole.log(name, age); // Output: 'John' 30",
+        "description": "In this example, array and object destructuring is used to extract values into variables."
+      }
+    },
+    {
+      "concept": "Rest Parameters",
+      "topic": "JavaScript",
+      "explanation": "Syntax that allows representing an indefinite number of arguments as an array in a function definition.",
+      "example": {
+        "snippet": "function sum(...numbers) {\n  return numbers.reduce((total, num) => total + num, 0);\n}\nconsole.log(sum(1, 2, 3)); // Output: 6",
+        "description": "In this example, 'sum' function takes any number of arguments and returns their sum using the rest parameter syntax."
+      }
+    },
+    {
+      "concept": "ES6 Default Parameters",
+      "topic": "JavaScript",
+      "explanation": "A feature that allows defining default values for function parameters, used when no argument or 'undefined' is passed.",
+      "example": {
+        "snippet": "// Default parameters\nfunction greet(name = 'Guest') {\n  console.log(`Hello, ${name}!`);\n}\ngreet(); // Output: Hello, Guest!",
+        "description": "In this example, 'name' parameter defaults to 'Guest' if no argument is provided."
+      }
+    },
+    {
+      "concept": "Spread Operator",
+      "topic": "JavaScript",
+      "explanation": "Syntax that allows an iterable (like an array or string) to be expanded into individual elements, used in function calls, array literals, and object literals.",
+      "example": {
+        "snippet": "// Spread operator in function calls\nfunction sum(a, b, c) {\n  return a + b + c;\n}\nlet numbers = [1, 2, 3];\nconsole.log(sum(...numbers)); // Output: 6",
+        "description": "In this example, the spread operator is used to pass array elements as arguments to the 'sum' function."
+      }
+    },
+    {
+      "concept": "ES6 Rest/Spread Properties",
+      "topic": "JavaScript",
+      "explanation": "A feature that allows gathering and spreading object properties using the rest and spread syntax, introduced in ES6.",
+      "example": {
+        "snippet": "// Rest properties\nlet { x, ...rest } = { x: 1, y: 2, z: 3 };\nconsole.log(rest); // Output: { y: 2, z: 3 }\n\n// Spread properties\nlet obj1 = { x: 1 };\nlet obj2 = { ...obj1, y: 2 };\nconsole.log(obj2); // Output: { x: 1, y: 2 }",
+        "description": "In this example, rest properties collect remaining properties into 'rest', and spread properties combine properties from 'obj1' and 'obj2'."
+      }
+    },
+    {
+      "concept": "Array Spread Operator",
+      "topic": "JavaScript",
+      "explanation": "The array spread operator (...) allows you to expand an array into individual elements, making it useful for array manipulation and function arguments.",
+      "example": {
+        "snippet": "// Array Spread Operator example\nconst arr1 = [1, 2, 3];\nconst arr2 = [...arr1, 4, 5];\nconsole.log(arr2); // Output: [1, 2, 3, 4, 5]",
+        "description": "This example illustrates the usage of the array spread operator to concatenate arrays and create a new array 'arr2'."
+      }
+    },
+    {
+      "concept": "Truthy and Falsy",
+      "topic": "JavaScript",
+      "explanation": "In JavaScript, values are evaluated as either truthy or falsy when used in a Boolean context. All values are considered truthy unless they are one of the following: false, 0, '', null, undefined, NaN.",
+      "example": {
+        "snippet": "// Truthy and falsy example\nif ('hello') {\n  console.log('Truthy');\n} else {\n  console.log('Falsy');\n}\n// Output: 'Truthy'",
+        "description": "In this example, the string 'hello' is evaluated as truthy and the corresponding message is logged."
+      }
+    },
+    {
+      "concept": "Callback Functions",
+      "topic": "JavaScript",
+      "explanation": "Functions passed as arguments to other functions and executed later, often used for asynchronous tasks and event handling.",
+      "example": {
+        "snippet": "function fetchData(callback) {\n  setTimeout(() => callback('Data fetched'), 1000);\n}\nfetchData(data => console.log(data)); // Output after 1 second: 'Data fetched'",
+        "description": "In this example, a callback function is passed to 'fetchData' and executed after data is fetched."
+      }
+    },
+    {
+      "concept": "Higher-Order Functions",
+      "topic": "JavaScript",
+      "explanation": "Functions that operate on other functions, either by taking them as arguments or by returning them.",
+      "example": {
+        "snippet": "function multiplyByTwo(x) {\n  return x * 2;\n}\nfunction operateOnArray(array, operation) {\n  return array.map(operation);\n}\nlet result = operateOnArray([1, 2, 3], multiplyByTwo);\nconsole.log(result); // Output: [2, 4, 6]",
+        "description": "In this example, 'operateOnArray' is a higher-order function that takes an array and an operation function, and applies the operation to each element."
+      }
+    },
+    {
+      "concept": "Immutable Data",
+      "topic": "JavaScript",
+      "explanation": "Data that cannot be changed after creation. Immutable data structures help prevent unintended side effects.",
+      "example": {
+        "snippet": "let arr1 = [1, 2, 3];\nlet arr2 = arr1.concat(4);\nconsole.log(arr1); // Output: [1, 2, 3]\nconsole.log(arr2); // Output: [1, 2, 3, 4]",
+        "description": "In this example, 'arr1' remains unchanged after concatenation, demonstrating immutability."
+      }
+    },
+    {
+      "concept": "Pure Functions",
+      "topic": "JavaScript",
+      "explanation": "Functions that return the same result for the same input and have no side effects, making them predictable and easy to test.",
+      "example": {
+        "snippet": "function add(a, b) {\n  return a + b;\n}",
+        "description": "This 'add' function is pure as it always returns the sum of its inputs without modifying any external state."
+      }
+    },
+    {
+      "concept": "Prototype",
+      "topic": "JavaScript",
+      "explanation": "An object's prototype is a reference to another object from which it inherits properties. JavaScript objects have a prototype-based inheritance mechanism.",
+      "example": {
+        "snippet": "function Person(name) {\n  this.name = name;\n}\nPerson.prototype.greet = function() {\n  return 'Hello, ' + this.name;\n};\nlet person = new Person('John');\nconsole.log(person.greet()); // Output: 'Hello, John'",
+        "description": "In this example, 'Person' objects inherit the 'greet' method from the 'Person.prototype'."
+      }
+    },
+    {
+      "concept": "Prototype Chain",
+      "topic": "JavaScript",
+      "explanation": "The mechanism through which JavaScript objects inherit properties and methods from their prototypes, forming a chain of objects.",
+      "example": {
+        "snippet": "// Creating objects with a prototype chain\nlet grandparent = { a: 1 };\nlet parent = Object.create(grandparent);\nparent.b = 2;\nlet child = Object.create(parent);\nconsole.log(child.a); // Output: 1",
+        "description": "In this example, 'child' object inherits the 'a' property from its prototype 'grandparent' via the prototype chain."
+      }
+    },
+    {
+      "concept": "Hoisting",
+      "topic": "JavaScript",
+      "explanation": "In JavaScript, variable and function declarations are moved to the top of their containing scope during compilation, allowing them to be used before they are declared.",
+      "example": {
+        "snippet": "console.log(x); // Output: undefined\nvar x = 10;",
+        "description": "In this example, 'x' is logged before its declaration due to hoisting. However, its value is undefined until assignment."
+      }
+    },
+    {
+      "concept": "Type Coercion",
+      "topic": "JavaScript",
+      "explanation": "The process of converting a value from one data type to another, usually implicit, based on the operation being performed.",
+      "example": {
+        "snippet": "console.log('5' + 5); // Output: '55'\nconsole.log('5' - 1); // Output: 4",
+        "description": "In this example, string concatenation and subtraction trigger type coercion, converting the number to a string or vice versa."
+      }
+    },
+    {
+      "concept": "NaN",
+      "topic": "JavaScript",
+      "explanation": "Stands for 'Not a Number'. It is a value returned when a mathematical operation fails to produce a meaningful result.",
+      "example": {
+        "snippet": "console.log(typeof NaN); // Output: 'number'\nconsole.log(NaN === NaN); // Output: false",
+        "description": "In this example, 'NaN' is of type 'number' but does not equal itself, indicating it represents an undefined or unrepresentable value."
+      }
+    },
+    {
+      "concept": "JSON",
+      "topic": "JavaScript",
+      "explanation": "Stands for JavaScript Object Notation. A lightweight data interchange format used for data exchange between a server and a client, often used with APIs.",
+      "example": {
+        "snippet": "let data = '{\"name\": \"John\", \"age\": 30}';\nlet parsedData = JSON.parse(data);\nconsole.log(parsedData.name); // Output: 'John'",
+        "description": "In this example, a JSON string is parsed into a JavaScript object, allowing access to its properties."
+      }
+    },
+    {
+      "concept": "Global Objects",
+      "topic": "JavaScript",
+      "explanation": "Global objects in JavaScript are predefined objects that are available globally in any part of the code. These objects provide built-in functionality and methods that can be accessed without the need for explicit instantiation.",
+      "example": {
+        "snippet": "// Global Objects example\nconsole.log(Math.random()); // Output: A random number between 0 and 1\nconsole.log(Date.now()); // Output: Current timestamp\nconsole.log(JSON.stringify({ key: 'value' })); // Output: '{\"key\":\"value\"}'",
+        "description": "This example demonstrates usage of global objects like Math, Date, and JSON to perform operations such as generating random numbers, getting current timestamps, and converting objects to JSON strings."
+      }
+    },
+    {
+      "concept": "Event Loop",
+      "topic": "JavaScript",
+      "explanation": "A mechanism that handles asynchronous operations in JavaScript. It continuously checks the call stack and the task queue, executing tasks in a non-blocking manner.",
+      "example": {
+        "snippet": "// Asynchronous operation\nsetTimeout(() => console.log('Async operation'), 0);\nconsole.log('End'); // Output: 'End' followed by 'Async operation'",
+        "description": "In this example, 'setTimeout' is executed asynchronously, allowing 'End' to be logged first while 'Async operation' is logged later."
+      }
+    },
+    {
+      "concept": "Closure",
+      "topic": "JavaScript",
+      "explanation": "A function that has access to its own scope, as well as the outer scope in which it was defined, even after the outer scope has closed.",
+      "example": {
+        "snippet": "function outer() {\n  let count = 0;\n  return function inner() {\n    return ++count;\n  };\n}\nlet counter = outer();\nconsole.log(counter()); // Output: 1",
+        "description": "In this example, 'inner' function maintains access to the 'count' variable from its containing scope even after 'outer' function has finished executing."
+      }
+    },
+    {
+      "concept": "Strict Mode",
+      "topic": "JavaScript",
+      "explanation": "A stricter variant of JavaScript that eliminates some silent errors and changes 'bad' syntax into real errors.",
+      "example": {
+        "snippet": "'use strict';\n// Strict mode code",
+        "description": "In this example, 'use strict' directive enables strict mode for the entire script or individual functions."
+      }
+    },
+    {
+      "concept": "Lexical Scope",
+      "topic": "JavaScript",
+      "explanation": "A scope defined at lexing time, based on the physical placement of functions and blocks in the code.",
+      "example": {
+        "snippet": "let globalVar = 'I am global';\nfunction myFunction() {\n  let localVar = 'I am local';\n  console.log(globalVar);\n}\nconsole.log(localVar); // Error: localVar is not defined",
+        "description": "In this example, 'globalVar' is accessible both globally and within 'myFunction', while 'localVar' is only accessible within 'myFunction'."
+      }
+    },
+    {
+      "concept": "Callback Hell",
+      "topic": "JavaScript",
+      "explanation": "A situation where multiple nested callbacks make code hard to read and maintain, especially in asynchronous code.",
+      "example": {
+        "snippet": "asyncFunc1(function() {\n  asyncFunc2(function() {\n    asyncFunc3(function() {\n      // More nested callbacks\n    });\n  });\n});",
+        "description": "In this example, asynchronous functions are nested within each other, resulting in callback hell."
+      }
+    },
+    {
+      "concept": "Web APIs",
+      "topic": "JavaScript",
+      "explanation": "Application Programming Interfaces provided by web browsers to enable interaction with the browser and its features.",
+      "example": {
+        "snippet": "// Example of using the Web Storage API\nlocalStorage.setItem('key', 'value');\nconsole.log(localStorage.getItem('key')); // Output: 'value'",
+        "description": "In this example, the Web Storage API is used to store and retrieve data locally."
+      }
+    },
+    {
+      "concept": "ESLint",
+      "topic": "JavaScript",
+      "explanation": "A popular static code analysis tool for identifying problematic patterns in JavaScript code.",
+      "example": {
+        "snippet": "// Sample ESLint configuration file\nmodule.exports = {\n  'extends': 'eslint:recommended',\n  'rules': {\n    // Additional rules\n  }\n};",
+        "description": "In this example, a sample ESLint configuration file is shown, extending the recommended rule set and allowing for additional custom rules."
+      }
+    },
+    {
+      "concept": "ES6+ Features",
+      "topic": "JavaScript",
+      "explanation": "New features introduced in ECMAScript 6 (ES6) and subsequent versions, bringing enhancements and additional functionality to JavaScript.",
+      "example": {
+        "snippet": "// Example of ES6+ feature: destructuring assignment\nlet {name, age} = {name: 'John', age: 30};\nconsole.log(name, age); // Output: 'John' 30",
+        "description": "In this example, object destructuring, introduced in ES6, is used to extract values into variables."
+      }
+    },
+    {
+      "concept": "Microservices",
+      "topic": "JavaScript",
+      "explanation": "Architectural style that structures an application as a collection of small, loosely coupled services, each responsible for a single function.",
+      "example": {
+        "snippet": "// Example of a microservice architecture\n// Each service handles a specific functionality\nuserMicroservice.getUsers()\norderMicroservice.createOrder()\nnotificationMicroservice.sendNotification()",
+        "description": "In this example, different microservices handle distinct functionalities such as user management, order processing, and notifications."
+      }
+    },
+    {
+      "concept": "Single Page Application (SPA)",
+      "topic": "JavaScript",
+      "explanation": "A web application that interacts with the user by dynamically rewriting the current page rather than loading entire new pages from the server.",
+      "example": {
+        "snippet": "// Example of a SPA framework: React\n// React updates the DOM efficiently without full page reloads\nReactDOM.render(<App />, document.getElementById('root'));",
+        "description": "In this example, React is used to render a single-page application, updating the DOM dynamically."
+      }
+    },
+    {
+      "concept": "Progressive Web Apps (PWA)",
+      "topic": "JavaScript",
+      "explanation": "Web applications that use modern web capabilities to provide an app-like experience, built and enhanced with progressive enhancement principles.",
+      "example": {
+        "snippet": "// Example of a PWA feature: offline support\n// Service workers enable caching and offline access\nnavigator.serviceWorker.register('sw.js');",
+        "description": "In this example, a service worker is registered to enable caching and offline access, a common feature in progressive web apps."
+      }
+    },
+    {
+      "concept": "Functional Programming",
+      "topic": "JavaScript",
+      "explanation": "A programming paradigm focused on writing code by composing functions and avoiding changing state and mutable data.",
+      "example": {
+        "snippet": "const numbers = [1, 2, 3, 4, 5];\nconst sum = numbers.reduce((total, num) => total + num, 0);\nconsole.log(sum); // Output: 15",
+        "description": "In this example, functional programming techniques like 'reduce' are used to compute the sum of an array of numbers."
+      }
+    },
+    {
+      "concept": "Debouncing",
+      "topic": "JavaScript",
+      "explanation": "A technique used to limit the rate at which a function is invoked, typically used to improve performance in event handling.",
+      "example": {
+        "snippet": "// Example of debouncing an input event\nfunction debounce(func, delay) {\n  let timeout;\n  return function() {\n    clearTimeout(timeout);\n    timeout = setTimeout(() => func.apply(this, arguments), delay);\n  };\n}\ninput.addEventListener('input', debounce(() => {\n  console.log('Input debounced');\n}, 300));",
+        "description": "In this example, an input event is debounced to limit the frequency of invoking the callback function."
+      }
+    },
+    {
+      "concept": "Throttling",
+      "topic": "JavaScript",
+      "explanation": "A technique to control the rate of execution of a function, ensuring it is called at most once in a specified time interval.",
+      "example": {
+        "snippet": "function throttle(func, delay) {\n  let timeout;\n  return function(...args) {\n    if (!timeout) {\n      timeout = setTimeout(() => {\n        func(...args);\n        timeout = null;\n      }, delay);\n    }\n  };\n}\nlet throttledFunc = throttle(() => console.log('Called'), 1000);\n// Example usage: throttledFunc();",
+        "description": "In this example, 'throttle' function is used to limit the rate of calling a function to once per second."
+      }
+    },
+    {
+      "concept": "Concurrency",
+      "topic": "JavaScript",
+      "explanation": "The ability of a program to perform multiple tasks simultaneously, often achieved in JavaScript through asynchronous programming.",
+      "example": {
+        "snippet": "// Concurrently fetching data from multiple APIs\nPromise.all([\n  fetch('https://api.example.com/data1'),\n  fetch('https://api.example.com/data2')\n])\n  .then(responses => Promise.all(responses.map(response => response.json())))\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));",
+        "description": "In this example, Promise.all is used to fetch data from multiple APIs concurrently."
+      }
+    },
+    {
+      "concept": "Memoization",
+      "topic": "JavaScript",
+      "explanation": "A technique used to improve the performance of functions by caching the results of expensive function calls and returning the cached result when the same inputs occur again.",
+      "example": {
+        "snippet": "// Example of memoization\nfunction memoize(func) {\n  const cache = new Map();\n  return function(...args) {\n    const key = JSON.stringify(args);\n    if (!cache.has(key)) {\n      cache.set(key, func(...args));\n    }\n    return cache.get(key);\n  };\n}\nconst memoizedFunction = memoize(expensiveFunction);\nconsole.log(memoizedFunction(5));",
+        "description": "In this example, the 'memoize' function wraps an expensive function, caching results to avoid redundant computations."
+      }
+    },
+    {
+      "concept": "Promise Chaining",
+      "topic": "JavaScript",
+      "explanation": "A technique to chain multiple asynchronous operations together using promises, ensuring one operation completes before starting the next.",
+      "example": {
+        "snippet": "fetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error:', error));",
+        "description": "In this example, fetch API is used to fetch data, followed by chaining 'then' methods to handle the response data and any errors."
+      }
+    },
+    {
+      "concept": "Webpack",
+      "topic": "JavaScript",
+      "explanation": "A popular module bundler for JavaScript applications, enabling the use of modules and bundling multiple files into a single file for deployment.",
+      "example": {
+        "snippet": "// webpack.config.js\nconst path = require('path');\nmodule.exports = {\n  entry: './src/index.js',\n  output: {\n    path: path.resolve(__dirname, 'dist'),\n    filename: 'bundle.js'\n  }\n};",
+        "description": "In this example, a basic webpack configuration is shown to bundle 'index.js' from 'src' directory into 'bundle.js' in 'dist' directory."
+      }
+    },
+    {
+      "concept": "Babel",
+      "topic": "JavaScript",
+      "explanation": "A popular JavaScript compiler that converts modern JavaScript code (ES6+) into a backward-compatible version that can be executed in older browsers.",
+      "example": {
+        "snippet": "// Babel CLI command to transpile files\nbabel src --out-dir dist",
+        "description": "In this example, Babel CLI is used to transpile JavaScript files from 'src' directory into 'dist' directory."
+      }
+    },
+    {
+      "concept": "Tree Shaking",
+      "topic": "JavaScript",
+      "explanation": "A process to eliminate dead code (unused modules or exports) from the final bundled JavaScript file, typically performed by module bundlers like Webpack.",
+      "example": {
+        "snippet": "// webpack.config.js\nconst path = require('path');\nmodule.exports = {\n  entry: './src/index.js',\n  output: {\n    path: path.resolve(__dirname, 'dist'),\n    filename: 'bundle.js'\n  },\n  mode: 'production',\n  optimization: {\n    usedExports: true\n  }\n};",
+        "description": "In this example, Webpack configuration enables 'usedExports' optimization to perform tree shaking and eliminate unused code."
+      }
+    },
+    {
+      "concept": "Progressive Web Apps (PWAs)",
+      "topic": "JavaScript",
+      "explanation": "Web applications that use modern web capabilities to provide a user experience similar to native apps, including offline support, push notifications, and more.",
+      "example": {
+        "snippet": "// Service Worker registration\nif ('serviceWorker' in navigator) {\n  window.addEventListener('load', () => {\n    navigator.serviceWorker.register('/sw.js')\n      .then(registration => console.log('Service Worker registered'))\n      .catch(error => console.error('Service Worker registration failed:', error));\n  });\n}",
+        "description": "In this example, a Service Worker is registered to enable offline support for a Progressive Web App."
+      }
+    },
+    {
+      "concept": "IndexedDB",
+      "topic": "JavaScript",
+      "explanation": "A low-level API for client-side storage of significant amounts of structured data, providing a more powerful alternative to cookies and localStorage.",
+      "example": {
+        "snippet": "// Opening IndexedDB database\nlet request = indexedDB.open('myDatabase', 1);\nrequest.onerror = event => console.error('Error:', event.target.error);\nrequest.onsuccess = event => {\n  let db = event.target.result;\n  // Use the database\n};",
+        "description": "In this example, an IndexedDB database named 'myDatabase' is opened with version 1, and success and error handlers are added."
+      }
+    },
+    {
+      "concept": "Service Workers",
+      "topic": "JavaScript",
+      "explanation": "Scripts that run in the background of a web application, enabling features such as push notifications, background sync, and caching for offline support.",
+      "example": {
+        "snippet": "// Service Worker registration\nif ('serviceWorker' in navigator) {\n  window.addEventListener('load', () => {\n    navigator.serviceWorker.register('/sw.js')\n      .then(registration => console.log('Service Worker registered'))\n      .catch(error => console.error('Service Worker registration failed:', error));\n  });\n}",
+        "description": "In this example, a Service Worker is registered to provide enhanced capabilities like offline support and push notifications."
+      }
+    },
+    {
+      "concept": "Web Workers",
+      "topic": "JavaScript",
+      "explanation": "A browser feature that enables running JavaScript code in background threads, allowing long-running scripts to execute without blocking the main thread.",
+      "example": {
+        "snippet": "// Creating a Web Worker\nlet worker = new Worker('worker.js');\n// Main thread listening for messages\nworker.onmessage = event => console.log('Received message:', event.data);\n// Sending a message from main thread\nworker.postMessage('Hello from main thread!');",
+        "description": "In this example, a Web Worker is created from 'worker.js', and messages are exchanged between the main thread and the worker."
+      }
+    },
+    {
+      "concept": "CORS (Cross-Origin Resource Sharing)",
+      "topic": "JavaScript",
+      "explanation": "A security feature implemented by browsers that controls which resources on a web page can be requested from another domain.",
+      "example": {
+        "snippet": "// CORS-enabled server response header\nAccess-Control-Allow-Origin: https://example.com",
+        "description": "In this example, a server responds with the 'Access-Control-Allow-Origin' header to allow requests from 'https://example.com'."
+      }
+    },
+    {
+      "concept": "HTTP Cookies",
+      "topic": "JavaScript",
+      "explanation": "Small pieces of data sent from a website and stored on the user's device by the user's web browser, often used for session management and user tracking.",
+      "example": {
+        "snippet": "// Setting a cookie\ndocument.cookie = 'username=John; expires=Fri, 31 Dec 2021 23:59:59 GMT; path=/';\n// Retrieving a cookie\nlet username = document.cookie.replace(/(?:(?:^|.*;\\s*)username\\s*\\=\\s*([^;]*).*$)|^.*$/, '$1');\nconsole.log(username); // Output: 'John'",
+        "description": "In this example, a cookie named 'username' is set with the value 'John' and retrieved using document.cookie."
+      }
+    },
+    {
+      "concept": "LocalStorage",
+      "topic": "JavaScript",
+      "explanation": "A web storage API that allows storing key-value pairs in a web browser with no expiration time, persisting even after the browser is closed.",
+      "example": {
+        "snippet": "// Storing data in localStorage\nlocalStorage.setItem('username', 'John');\n// Retrieving data from localStorage\nlet username = localStorage.getItem('username');\nconsole.log(username); // Output: 'John'",
+        "description": "In this example, 'username' is stored in localStorage and later retrieved."
+      }
+    },
+    {
+      "concept": "SessionStorage",
+      "topic": "JavaScript",
+      "explanation": "A web storage API similar to localStorage, but with the data persisting only for the duration of the page session, cleared when the page session ends.",
+      "example": {
+        "snippet": "// Storing data in sessionStorage\nsessionStorage.setItem('token', 'abcd1234');\n// Retrieving data from sessionStorage\nlet token = sessionStorage.getItem('token');\nconsole.log(token); // Output: 'abcd1234'",
+        "description": "In this example, 'token' is stored in sessionStorage and accessed within the same session."
+      }
+    },
+    {
+      "concept": "Call Stack",
+      "topic": "JavaScript",
+      "explanation": "A data structure that stores function calls in JavaScript, following a Last In, First Out (LIFO) order, used to manage function execution.",
+      "example": {
+        "snippet": "// Simulated call stack\nfunction foo() {\n  throw new Error('Oops!');\n}\nfunction bar() {\n  foo();\n}\nbar(); // Error: Oops!",
+        "description": "In this example, function calls 'bar' and 'foo' are added to the call stack, with 'foo' throwing an error."
+      }
+    },
+    {
+      "concept": "Heap",
+      "topic": "JavaScript",
+      "explanation": "The memory area where objects are allocated and stored in JavaScript, managed by the JavaScript engine's memory allocator.",
+      "example": {
+        "snippet": "// Object allocation in heap\nlet obj = { x: 10, y: 20 };\nconsole.log(obj);",
+        "description": "In this example, an object 'obj' with properties 'x' and 'y' is allocated in the heap."
+      }
+    },
+    {
+      "concept": "Garbage Collection",
+      "topic": "JavaScript",
+      "explanation": "The process of automatically reclaiming memory occupied by objects that are no longer referenced or needed in a program.",
+      "example": {
+        "snippet": "// Garbage collection in action\nlet obj = { x: 10 };\nobj = null; // No longer referenced, eligible for garbage collection",
+        "description": "In this example, object 'obj' becomes eligible for garbage collection after being set to null."
+      }
+    },
+    {
+      "concept": "IIFE (Immediately Invoked Function Expression)",
+      "topic": "JavaScript",
+      "explanation": "A JavaScript function that runs as soon as it is defined, without needing to be explicitly called.",
+      "example": {
+        "snippet": "// IIFE example\n(function() {\n  console.log('Hello from IIFE');\n})(); // Output: Hello from IIFE",
+        "description": "In this example, an IIFE is used to log a message immediately after its definition."
+      }
+    },
+    {
+      "concept": "ES6 Symbols",
+      "topic": "JavaScript",
+      "explanation": "A data type introduced in ES6 that serves as unique identifiers for object properties.",
+      "example": {
+        "snippet": "let mySymbol = Symbol();\nlet obj = {};\nobj[mySymbol] = 'value';\nconsole.log(obj[mySymbol]); // Output: 'value'",
+        "description": "In this example, 'mySymbol' is used as a property key in 'obj', ensuring its uniqueness."
+      }
+    },
+    {
+      "concept": "ES6 Iterators",
+      "topic": "JavaScript",
+      "explanation": "Objects that enable iteration over data structures like arrays, maps, and sets, introduced in ES6.",
+      "example": {
+        "snippet": "let arr = [1, 2, 3];\nlet iterator = arr[Symbol.iterator]();\nconsole.log(iterator.next().value); // Output: 1",
+        "description": "In this example, 'arr' is an array, and its iterator is used to access each element."
+      }
+    },
+    {
+      "concept": "ES6 Generators",
+      "topic": "JavaScript",
+      "explanation": "Functions that can be paused and resumed, enabling more complex control flows, introduced in ES6.",
+      "example": {
+        "snippet": "function* generator() {\n  yield 1;\n  yield 2;\n  yield 3;\n}\nlet gen = generator();\nconsole.log(gen.next().value); // Output: 1",
+        "description": "In this example, 'generator' function generates values one at a time using 'yield' keyword."
+      }
+    },
+    {
+      "concept": "ES6 Proxy",
+      "topic": "JavaScript",
+      "explanation": "An object used to define custom behavior for fundamental operations like property lookup, assignment, enumeration, etc., introduced in ES6.",
+      "example": {
+        "snippet": "let target = {};\nlet handler = {\n  get: function(target, prop) {\n    return prop in target ? target[prop] : 'Not found';\n  }\n};\nlet proxy = new Proxy(target, handler);\nconsole.log(proxy.name); // Output: 'Not found'",
+        "description": "In this example, a proxy is used to intercept property lookup and return a custom message if the property is not found."
+      }
+    },
+    {
+      "concept": "ES6 Reflect API",
+      "topic": "JavaScript",
+      "explanation": "A set of built-in methods for performing meta-programming operations on objects, introduced in ES6.",
+      "example": {
+        "snippet": "let obj = {};\nReflect.defineProperty(obj, 'property', {value: 123});\nconsole.log(obj.property); // Output: 123",
+        "description": "In this example, Reflect API is used to define a new property on 'obj' with a specified value."
+      }
+    },
+    {
+      "concept": "Array.map()",
+      "topic": "JavaScript",
+      "explanation": "A method used to create a new array by applying a function to each element of an existing array.",
+      "example": {
+        "snippet": "// Array.map() example\nlet numbers = [1, 2, 3];\nlet doubled = numbers.map(num => num * 2);\nconsole.log(doubled); // Output: [2, 4, 6]",
+        "description": "In this example, 'map' is used to double each element in the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.reduce()",
+      "topic": "JavaScript",
+      "explanation": "A method that reduces an array to a single value by applying a function to each element and accumulating the result.",
+      "example": {
+        "snippet": "// Array.reduce() example\nlet numbers = [1, 2, 3, 4];\nlet sum = numbers.reduce((total, num) => total + num, 0);\nconsole.log(sum); // Output: 10",
+        "description": "In this example, 'reduce' is used to calculate the sum of elements in the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.find()",
+      "topic": "JavaScript",
+      "explanation": "A method that returns the first element in an array that satisfies a provided testing function, or 'undefined' if no such element is found.",
+      "example": {
+        "snippet": "// Array.find() example\nlet numbers = [1, 2, 3, 4];\nlet even = numbers.find(num => num % 2 === 0);\nconsole.log(even); // Output: 2",
+        "description": "In this example, 'find' is used to find the first even number in the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.findIndex()",
+      "topic": "JavaScript",
+      "explanation": "A method that returns the index of the first element in an array that satisfies a provided testing function, or -1 if no such element is found.",
+      "example": {
+        "snippet": "// Array.findIndex() example\nlet numbers = [1, 2, 3, 4];\nlet index = numbers.findIndex(num => num % 2 === 0);\nconsole.log(index); // Output: 1",
+        "description": "In this example, 'findIndex' is used to find the index of the first even number in the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.forEach()",
+      "topic": "JavaScript",
+      "explanation": "A method that executes a provided function once for each array element.",
+      "example": {
+        "snippet": "// Array.forEach() example\nlet numbers = [1, 2, 3];\nnumbers.forEach(num => console.log(num * 2)); // Output: 2 4 6",
+        "description": "In this example, 'forEach' is used to log each element of the 'numbers' array multiplied by 2."
+      }
+    },
+    {
+      "concept": "Array.filter()",
+      "topic": "JavaScript",
+      "explanation": "A method that creates a new array with all elements that pass the test implemented by the provided function.",
+      "example": {
+        "snippet": "// Array.filter() example\nlet numbers = [1, 2, 3, 4];\nlet evenNumbers = numbers.filter(num => num % 2 === 0);\nconsole.log(evenNumbers); // Output: [2, 4]",
+        "description": "In this example, 'filter' is used to create an array of even numbers from the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.some()",
+      "topic": "JavaScript",
+      "explanation": "The 'some()' method tests whether at least one element in the array passes the test implemented by the provided function. It returns a Boolean value.",
+      "example": {
+        "snippet": "// Array.some() example\nlet numbers = [1, 2, 3, 4, 5];\nlet hasEven = numbers.some(num => num % 2 === 0);\nconsole.log(hasEven); // Output: true",
+        "description": "In this example, the 'some()' method checks if there is at least one even number in the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.includes()",
+      "topic": "JavaScript",
+      "explanation": "The 'includes()' method checks whether an array includes a certain value, returning true or false as appropriate.",
+      "example": {
+        "snippet": "// Array.includes() example\nlet fruits = ['Apple', 'Banana', 'Orange'];\nlet includesBanana = fruits.includes('Banana');\nconsole.log(includesBanana); // Output: true",
+        "description": "In this example, the 'includes()' method checks if the 'fruits' array includes the value 'Banana'."
+      }
+    },
+    {
+      "concept": "Array.slice()",
+      "topic": "JavaScript",
+      "explanation": "A method that returns a shallow copy of a portion of an array into a new array object selected from 'begin' to 'end' ('end' not included).",
+      "example": {
+        "snippet": "// Array.slice() example\nlet numbers = [1, 2, 3, 4, 5];\nlet subset = numbers.slice(1, 3);\nconsole.log(subset); // Output: [2, 3]",
+        "description": "In this example, 'slice' is used to extract a portion of the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.splice()",
+      "topic": "JavaScript",
+      "explanation": "A method that changes the contents of an array by removing or replacing existing elements and/or adding new elements in place.",
+      "example": {
+        "snippet": "// Array.splice() example\nlet numbers = [1, 2, 3, 4];\nnumbers.splice(1, 2, 5, 6);\nconsole.log(numbers); // Output: [1, 5, 6, 4]",
+        "description": "In this example, 'splice' is used to remove two elements starting from index 1 and replace them with 5 and 6."
+      }
+    },
+    {
+      "concept": "Array.push()",
+      "topic": "JavaScript",
+      "explanation": "A method that adds one or more elements to the end of an array and returns the new length of the array.",
+      "example": {
+        "snippet": "// Array.push() example\nlet numbers = [1, 2, 3];\nnumbers.push(4, 5);\nconsole.log(numbers); // Output: [1, 2, 3, 4, 5]",
+        "description": "In this example, 'push' is used to add elements 4 and 5 to the end of the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.pop()",
+      "topic": "JavaScript",
+      "explanation": "A method that removes the last element from an array and returns that element.",
+      "example": {
+        "snippet": "// Array.pop() example\nlet numbers = [1, 2, 3];\nlet last = numbers.pop();\nconsole.log(last); // Output: 3",
+        "description": "In this example, 'pop' is used to remove and retrieve the last element from the 'numbers' array."
+      }
+    },
+    {
+      "concept": "Array.concat()",
+      "topic": "JavaScript",
+      "explanation": "A method that combines two or more arrays and returns a new array.",
+      "example": {
+        "snippet": "// Array.concat() example\nlet numbers1 = [1, 2];\nlet numbers2 = [3, 4];\nlet combined = numbers1.concat(numbers2);\nconsole.log(combined); // Output: [1, 2, 3, 4]",
+        "description": "In this example, 'concat' is used to combine 'numbers1' and 'numbers2' arrays into a new array."
+      }
+    },
+    {
+      "concept": "Array.join()",
+      "topic": "JavaScript",
+      "explanation": "The 'join()' method creates and returns a new string by concatenating all the elements in an array (or array-like object), separated by a specified separator string.",
+      "example": {
+        "snippet": "// Array.join() example\nlet fruits = ['Apple', 'Banana', 'Orange'];\nlet joinedString = fruits.join(', ');\nconsole.log(joinedString); // Output: 'Apple, Banana, Orange'",
+        "description": "In this example, the 'join()' method concatenates the elements of the 'fruits' array with a comma and space as the separator."
+      }
+    },
+    {
+      "concept": "Array.sort()",
+      "topic": "JavaScript",
+      "explanation": "A method that sorts the elements of an array in place and returns the sorted array.",
+      "example": {
+        "snippet": "// Array.sort() example\nlet numbers = [3, 1, 2];\nnumbers.sort();\nconsole.log(numbers); // Output: [1, 2, 3]",
+        "description": "In this example, 'sort' is used to sort the elements of the 'numbers' array in ascending order."
+      }
+    },
+    {
+      "concept": "Array.every()",
+      "topic": "JavaScript",
+      "explanation": "The 'every()' method tests whether all elements in the array pass the test implemented by the provided function. It returns a Boolean value.",
+      "example": {
+        "snippet": "// Array.every() example\nlet numbers = [1, 2, 3, 4, 5];\nlet allPositive = numbers.every(num => num > 0);\nconsole.log(allPositive); // Output: true",
+        "description": "In this example, the 'every()' method checks if all numbers in the 'numbers' array are positive."
+      }
+    },
+    {
+      "concept": "Array.reduceRight()",
+      "topic": "JavaScript",
+      "explanation": "The 'reduceRight()' method applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.",
+      "example": {
+        "snippet": "// Array.reduceRight() example\nlet numbers = [1, 2, 3, 4];\nlet sum = numbers.reduceRight((total, num) => total + num, 0);\nconsole.log(sum); // Output: 10",
+        "description": "In this example, 'reduceRight()' is used to calculate the sum of elements in the 'numbers' array, starting from the right."
+      }
+    },
+    {
+      "concept": "Array.flat()",
+      "topic": "JavaScript",
+      "explanation": "The 'flat()' method creates a new array with all sub-array elements concatenated into it recursively up to the specified depth.",
+      "example": {
+        "snippet": "// Array.flat() example\nlet nestedArray = [1, [2, 3], [4, [5, 6]]];\nlet flatArray = nestedArray.flat();\nconsole.log(flatArray); // Output: [1, 2, 3, 4, [5, 6]]",
+        "description": "In this example, 'flat()' is used to flatten the 'nestedArray' by one level."
+      }
+    },
+    {
+      "concept": "Array.flatMap()",
+      "topic": "JavaScript",
+      "explanation": "The 'flatMap()' method first maps each element using a mapping function, then flattens the result into a new array.",
+      "example": {
+        "snippet": "// Array.flatMap() example\nlet arr = ['hello', 'world'];\nlet flattened = arr.flatMap(word => word.split(''));\nconsole.log(flattened); // Output: ['h', 'e', 'l', 'l', 'o', 'w', 'o', 'r', 'l', 'd']",
+        "description": "In this example, 'flatMap()' is used to split each word into individual letters and flatten the result."
+      }
+    },
+    {
+      "concept": "Array.reverse()",
+      "topic": "JavaScript",
+      "explanation": "The 'reverse()' method reverses the order of the elements in an array in place.",
+      "example": {
+        "snippet": "// Array.reverse() example\nlet arr = [1, 2, 3];\narr.reverse();\nconsole.log(arr); // Output: [3, 2, 1]",
+        "description": "In this example, 'reverse()' is used to reverse the order of elements in the 'arr' array."
+      }
+    },
+    {
+      "concept": "Array.keys()",
+      "topic": "JavaScript",
+      "explanation": "The 'keys()' method returns an iterator that yields the keys of the array, starting at index 0.",
+      "example": {
+        "snippet": "// Array.keys() example\nlet arr = ['a', 'b', 'c'];\nlet iterator = arr.keys();\nfor (let key of iterator) {\n  console.log(key); // Output: 0, 1, 2\n}",
+        "description": "In this example, 'keys()' is used to iterate over the keys of the 'arr' array."
+      }
+    },
+    {
+      "concept": "Array.values()",
+      "topic": "JavaScript",
+      "explanation": "The 'values()' method returns an iterator that yields the values of the array, in the same order as that of 'for...of' loop.",
+      "example": {
+        "snippet": "// Array.values() example\nlet arr = ['a', 'b', 'c'];\nlet iterator = arr.values();\nfor (let value of iterator) {\n  console.log(value); // Output: 'a', 'b', 'c'\n}",
+        "description": "In this example, 'values()' is used to iterate over the values of the 'arr' array."
+      }
+    },
+    {
+      "concept": "Array.entries()",
+      "topic": "JavaScript",
+      "explanation": "The 'entries()' method returns an iterator that yields key-value pairs for each index in the array.",
+      "example": {
+        "snippet": "// Array.entries() example\nlet arr = ['a', 'b', 'c'];\nlet iterator = arr.entries();\nfor (let entry of iterator) {\n  console.log(entry); // Output: [0, 'a'], [1, 'b'], [2, 'c']\n}",
+        "description": "In this example, 'entries()' is used to iterate over the key-value pairs of the 'arr' array."
+      }
+    },
+    {
+      "concept": "Array.from()",
+      "topic": "JavaScript",
+      "explanation": "The 'from()' method creates a new, shallow-copied array instance from an array-like or iterable object.",
+      "example": {
+        "snippet": "// Array.from() example\nlet arrayLike = { length: 2, 0: 'a', 1: 'b' };\nlet arr = Array.from(arrayLike);\nconsole.log(arr); // Output: ['a', 'b']",
+        "description": "In this example, 'from()' is used to create a new array from an array-like object."
+      }
+    },
+    {
+      "concept": "Array.of()",
+      "topic": "JavaScript",
+      "explanation": "The 'of()' method creates a new array instance with a variable number of arguments, regardless of number or type of the arguments.",
+      "example": {
+        "snippet": "// Array.of() example\nlet arr = Array.of(1, 'a', true);\nconsole.log(arr); // Output: [1, 'a', true]",
+        "description": "In this example, 'of()' is used to create a new array with three elements: 1, 'a', and true."
+      }
+    },
+    {
+      "concept": "Array.isArray()",
+      "topic": "JavaScript",
+      "explanation": "The 'isArray()' method determines whether the passed value is an array.",
+      "example": {
+        "snippet": "// Array.isArray() example\nconsole.log(Array.isArray([1, 2, 3])); // Output: true\nconsole.log(Array.isArray('hello')); // Output: false",
+        "description": "In this example, 'isArray()' is used to check if the passed value is an array."
+      }
+    },
+    {
+      "concept": "Array.fill()",
+      "topic": "JavaScript",
+      "explanation": "The 'fill()' method changes all elements in an array to a static value, from a start index to an end index (optional).",
+      "example": {
+        "snippet": "// Array.fill() example\nlet arr = [1, 2, 3];\narr.fill(0, 1, 2);\nconsole.log(arr); // Output: [1, 0, 3]",
+        "description": "In this example, 'fill()' is used to replace elements in the 'arr' array with the value 0, starting from index 1."
+      }
+    },
+    {
+      "concept": "DOM (Document Object Model)",
+      "topic": "JavaScript",
+      "explanation": "The Document Object Model (DOM) is a programming interface provided by web browsers that represents the structure of HTML and XML documents as a hierarchical tree of nodes. It allows scripts to dynamically access and modify the content, structure, and style of web pages.",
+      "example": {
+        "snippet": "// Example of DOM manipulation\nconst element = document.getElementById('myElement');\nelement.textContent = 'New text content';",
+        "description": "In this example, the text content of an HTML element with the id 'myElement' is changed dynamically using the DOM."
+      }
+    },
+    {
+      "concept": "Prototypal Inheritance",
+      "topic": "JavaScript",
+      "explanation": "Prototypal inheritance is a way of creating objects based on existing objects, allowing objects to inherit properties and methods from other objects.",
+      "example": {
+        "snippet": "// Prototypal inheritance example\nfunction Animal(name) {\n  this.name = name;\n}\nAnimal.prototype.sayName = function() {\n  console.log('My name is ' + this.name);\n};\nlet cat = new Animal('Tom');\ncat.sayName(); // Output: 'My name is Tom'",
+        "description": "In this example, 'cat' object inherits the 'sayName' method from the 'Animal' prototype."
+      }
+    },
+    {
+      "concept": "Anonymous Functions",
+      "topic": "JavaScript",
+      "explanation": "Anonymous functions, also known as function expressions, are functions without a name. They can be assigned to variables or passed as arguments to other functions.",
+      "example": {
+        "snippet": "// Anonymous function example\nlet add = function(x, y) {\n  return x + y;\n};\nconsole.log(add(3, 5)); // Output: 8",
+        "description": "In this example, an anonymous function is assigned to the 'add' variable and then invoked to add two numbers."
+      }
+    },
+    {
+      "concept": "Currying",
+      "topic": "JavaScript",
+      "explanation": "Currying is a technique in functional programming where a function with multiple arguments is converted into a sequence of functions, each taking a single argument.",
+      "example": {
+        "snippet": "// Currying example\nfunction add(x) {\n  return function(y) {\n    return x + y;\n  };\n}\nlet addThree = add(3);\nconsole.log(addThree(5)); // Output: 8",
+        "description": "In this example, a curried function 'add' is defined, which takes one argument 'x' and returns another function that takes 'y' and adds it to 'x'."
+      }
+    },
+    {
+      "concept": "Mutation",
+      "topic": "JavaScript",
+      "explanation": "Mutation refers to changing the state or value of an object or variable directly.",
+      "example": {
+        "snippet": "// Mutation example\nlet obj = { name: 'John' };\nobj.name = 'Jane';\nconsole.log(obj.name); // Output: 'Jane'",
+        "description": "In this example, the value of the 'name' property in the 'obj' object is mutated from 'John' to 'Jane'."
+      }
+    },
+    {
+      "concept": "Pragma",
+      "topic": "JavaScript",
+      "explanation": "Pragma refers to special instructions to the compiler or interpreter to handle code in a specific way.",
+      "example": {
+        "snippet": "// Pragma example\n'use strict';\n// This activates strict mode in JavaScript\n",
+        "description": "In this example, the 'use strict' pragma is used to enable strict mode in JavaScript, which enforces stricter parsing and error handling."
+      }
+    },
+    {
+      "concept": "Sentinel",
+      "topic": "JavaScript",
+      "explanation": "A sentinel value is a special value used to indicate the end of a sequence or to mark the absence of a value.",
+      "example": {
+        "snippet": "// Sentinel example\nfunction findIndex(arr, target) {\n  let index = arr.indexOf(target);\n  return index !== -1 ? index : null;\n}\nconsole.log(findIndex([1, 2, 3], 4)); // Output: null",
+        "description": "In this example, 'null' is used as a sentinel value to indicate that the target value was not found in the array."
+      }
+    },
+    {
+      "concept": "Vanilla",
+      "topic": "JavaScript",
+      "explanation": "Vanilla refers to plain, unmodified, or basic versions of something, often used to distinguish from specialized or modified versions.",
+      "example": {
+        "snippet": "// Vanilla example\n// Refers to basic, unmodified JavaScript without any frameworks or libraries.",
+        "description": "In this example, 'vanilla' is used to refer to plain JavaScript without any additional frameworks or libraries."
+      }
+    },
+    {
+      "concept": "Arity",
+      "topic": "JavaScript",
+      "explanation": "Arity refers to the number of arguments a function expects.",
+      "example": {
+        "snippet": "// Arity example\nfunction sum(x, y) {\n  return x + y;\n}\nconsole.log(sum.length); // Output: 2",
+        "description": "In this example, the 'length' property of the 'sum' function is used to determine its arity, which is 2."
+      }
+    },
+    {
+      "concept": "Variadic",
+      "topic": "JavaScript",
+      "explanation": "Variadic refers to functions that accept a variable number of arguments.",
+      "example": {
+        "snippet": "// Variadic example\nfunction sum(...args) {\n  return args.reduce((total, num) => total + num, 0);\n}\nconsole.log(sum(1, 2, 3)); // Output: 6",
+        "description": "In this example, the 'sum' function is variadic, meaning it accepts any number of arguments and calculates their sum."
+      }
+    },
+    {
+      "concept": "Decorator",
+      "topic": "JavaScript",
+      "explanation": "A decorator is a design pattern that allows behavior to be added to individual objects dynamically, without affecting the behavior of other objects from the same class.",
+      "example": {
+        "snippet": "// Decorator example\nfunction decorator(target) {\n  target.isDecoratorApplied = true;\n}\n@decorator\nclass MyClass {}\nconsole.log(MyClass.isDecoratorApplied); // Output: true",
+        "description": "In this example, a decorator function is applied to a class using the '@decorator' syntax to modify its behavior."
+      }
+    },
+    {
+      "concept": "WeakSet",
+      "topic": "JavaScript",
+      "explanation": "A WeakSet is a collection of objects only, where each object may occur only once.",
+      "example": {
+        "snippet": "// WeakSet example\nlet weakSet = new WeakSet();\nlet obj1 = { name: 'John' };\nlet obj2 = { name: 'Jane' };\nweakSet.add(obj1);\nweakSet.add(obj2);\nconsole.log(weakSet.has(obj1)); // Output: true",
+        "description": "In this example, a WeakSet is created and used to store objects, which can be garbage collected if there are no other references."
+      }
+    },
+    {
+      "concept": "WeakMap",
+      "topic": "JavaScript",
+      "explanation": "A WeakMap is a collection of key-value pairs, where keys must be objects and values can be of any type. Keys are weakly referenced, meaning they do not prevent garbage collection.",
+      "example": {
+        "snippet": "// WeakMap example\nlet weakMap = new WeakMap();\nlet key = {};\nweakMap.set(key, 'value');\nconsole.log(weakMap.get(key)); // Output: 'value'",
+        "description": "In this example, a WeakMap is created and used to associate a value with an object, without preventing the object from being garbage collected."
+      }
+    },
+    {
+      "concept": "Immutability",
+      "topic": "JavaScript",
+      "explanation": "Immutability refers to the property of data where it cannot be changed once created. In JavaScript, primitives are immutable, while objects and arrays are mutable.",
+      "example": {
+        "snippet": "// Immutability example\nconst arr = [1, 2, 3];\nconst newArr = [...arr, 4]; // Create a new array\nconsole.log(newArr); // Output: [1, 2, 3, 4]\nconsole.log(arr); // Output: [1, 2, 3]",
+        "description": "This example demonstrates immutability by creating a new array 'newArr' instead of modifying the original array 'arr'."
+      }
+    },
+    {
+      "concept": "Computed Property Names",
+      "topic": "JavaScript",
+      "explanation": "A feature that allows using an expression in square brackets '[]' for property names in object literals and classes.",
+      "example": {
+        "snippet": "// Computed property names\nlet prop = 'name';\nlet obj = { [prop]: 'John' };\nconsole.log(obj.name); // Output: John",
+        "description": "In this example, a computed property name is used to dynamically assign a property to the object 'obj'."
+      }
+    },
+    {
+      "concept": "Object Method Binding",
+      "topic": "JavaScript",
+      "explanation": "Object method binding refers to the process of associating a function with an object, so that the function has access to the object's properties and can operate on them using the 'this' keyword.",
+      "example": {
+        "snippet": "// Object Method Binding example\nconst person = {\n  name: 'John',\n  greet: function() {\n    console.log('Hello, my name is ' + this.name);\n  }\n};\nperson.greet(); // Output: 'Hello, my name is John'",
+        "description": "This example illustrates object method binding where the 'greet' function accesses the 'name' property of the 'person' object using 'this'."
+      }
+    },
+    {
+      "concept": "Explicit Function Binding",
+      "topic": "JavaScript",
+      "explanation": "Explicit function binding involves using methods like 'call', 'apply', or 'bind' to explicitly set the value of 'this' within a function's execution context.",
+      "example": {
+        "snippet": "// Explicit Function Binding example\nfunction greet() {\n  console.log('Hello, my name is ' + this.name);\n}\nconst person1 = { name: 'John' };\nconst person2 = { name: 'Jane' };\ngreet.call(person1); // Output: 'Hello, my name is John'\ngreet.call(person2); // Output: 'Hello, my name is Jane'",
+        "description": "This example demonstrates explicit function binding using the 'call' method to set the value of 'this' within the 'greet' function."
+      }
+    },
+    {
+      "concept": "Function Borrowing",
+      "topic": "JavaScript",
+      "explanation": "Function borrowing involves borrowing a method from one object and using it on another object. It allows reusing functionality across different objects.",
+      "example": {
+        "snippet": "// Function Borrowing example\nconst person1 = {\n  name: 'John',\n  greet: function() {\n    console.log('Hello, my name is ' + this.name);\n  }\n};\nconst person2 = { name: 'Jane' };\nperson1.greet.call(person2); // Output: 'Hello, my name is Jane'",
+        "description": "This example demonstrates function borrowing by invoking the 'greet' method from 'person1' with 'person2' as the context."
+      }
+    },
+    {
+      "concept": "Async script attribute",
+      "topic": "JavaScript",
+      "explanation": "The 'async' attribute in JavaScript specifies that the script should be executed asynchronously as soon as it is available. This means that the script will not block the parsing of the HTML document and will be executed alongside the document loading.",
+      "example": {
+        "snippet": "<script async src='script.js'></script>",
+        "description": "This example illustrates the use of the 'async' attribute in a script tag. The script 'script.js' will be fetched asynchronously, allowing the HTML parsing to continue without waiting for it to load."
+      }
+    },
+    {
+      "concept": "Defer script attribute",
+      "topic": "JavaScript",
+      "explanation": "The 'defer' attribute in JavaScript specifies that the script should be executed after the HTML document has been fully parsed and before the 'DOMContentLoaded' event is fired. This ensures that the script is executed in the order it appears in the document.",
+      "example": {
+        "snippet": "<script defer src='script.js'></script>",
+        "description": "This example demonstrates the use of the 'defer' attribute in a script tag. The script 'script.js' will be fetched asynchronously but executed only after the HTML document has been fully parsed."
+      }
+    },
+    {
+      "concept": "Async vs Defer script attribute",
+      "topic": "JavaScript",
+      "explanation": "The 'async' attribute executes the script asynchronously, while the 'defer' attribute ensures that the script is executed after the HTML document has been parsed but before the 'DOMContentLoaded' event is fired. 'async' scripts may be executed out of order, while 'defer' scripts are executed in order.",
+      "example": {
+        "snippet": "<!-- Async script -->\n<script async src='async.js'></script>\n\n<!-- Defer script -->\n<script defer src='defer.js'></script>",
+        "description": "This example compares the usage of 'async' and 'defer' attributes in script tags. 'async.js' will be executed as soon as it's available, whereas 'defer.js' will be executed after the HTML document has been parsed but before the 'DOMContentLoaded' event is fired."
+      }
+    },
+    {
+      "concept": "Regular Expressions",
+      "topic": "JavaScript",
+      "explanation": "Regular expressions, or regex, are patterns used to match character combinations in strings. They are a powerful tool for searching, extracting, and manipulating text based on patterns.",
+      "example": {
+        "snippet": "// Regular Expressions example\nconst regex = /hello/;\nconst str = 'Hello, World!';\nconsole.log(regex.test(str)); // Output: false\nconsole.log(str.match(regex)); // Output: null\nconst newStr = str.replace(regex, 'Hi');\nconsole.log(newStr); // Output: 'Hello, World!'",
+        "description": "This example demonstrates the usage of regular expressions to test, match, and replace patterns within a string."
+      }
+    },
+    {
+      "concept": "Property accessors",
+      "topic": "JavaScript",
+      "explanation": "Property accessors in JavaScript are mechanisms for accessing or retrieving the value of an object's properties. They include dot notation (obj.property) and bracket notation (obj['property']).",
+      "example": {
+        "snippet": "// Property accessors example\nconst person = {\n  name: 'John'\n};\nconsole.log(person.name); // Output: 'John'\nconsole.log(person['name']); // Output: 'John'",
+        "description": "This example demonstrates property accessors using both dot notation and bracket notation to access the 'name' property of the 'person' object."
+      }
+    },
+    {
+      "concept": "Dynamic and weak typing",
+      "topic": "JavaScript",
+      "explanation": "Dynamic typing in JavaScript refers to the ability of variables to hold values of any data type, and the data type of a variable can change during execution. Weak typing refers to implicit type conversion that occurs during operations.",
+      "example": {
+        "snippet": "// Dynamic and weak typing example\nlet x = 10;\nx = 'Hello';\nconsole.log(x); // Output: 'Hello'\nconsole.log(5 + '5'); // Output: '55'",
+        "description": "This example demonstrates dynamic typing where the variable 'x' changes its type from number to string, and weak typing where the addition operation implicitly converts the number to a string."
+      }
+    },
+    {
+      "concept": "Meta programming",
+      "topic": "JavaScript",
+      "explanation": "Meta programming in JavaScript involves writing code that manipulates other code at runtime. This can include dynamically creating functions, modifying object prototypes, and more.",
+      "example": {
+        "snippet": "// Meta programming example\nconst obj = {};\nobj.foo = 'bar';\nconsole.log(obj.foo); // Output: 'bar'",
+        "description": "This example demonstrates a basic form of metaprogramming where a property 'foo' is dynamically added to an object 'obj' at runtime."
+      }
+    }
+  ]
+}

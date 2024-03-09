@@ -1,0 +1,909 @@
+{
+  "articleCount": 103,
+  "articles": [
+    {
+      "category": "Programming Concept",
+      "title": "Abstraction",
+      "explanation": "Abstraction is the process of hiding complex implementation details and showing only the necessary features of an object or function. It allows developers to work with high-level ideas without needing to understand all the underlying complexities.",
+      "example": {
+        "snippet": "// Example of abstraction in OOP\nclass Animal {\n  constructor(name) {\n    this.name = name;\n  }\n\n  makeSound() {\n    // Abstract method\n    throw new Error('makeSound method must be implemented');\n  }\n}\nclass Dog extends Animal {\n  makeSound() {\n    return 'Woof!';\n  }\n}\n\nconst dog = new Dog('Buddy');\nconsole.log(dog.makeSound());",
+        "description": "In this example, the Animal class defines an abstract method makeSound(), which must be implemented by subclasses such as Dog."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Binary",
+      "explanation": "Binary is a base-2 numeral system that uses only two digits: 0 and 1. It is commonly used in computing and digital electronics to represent numbers, characters, and data.",
+      "example": {
+        "snippet": "// Example of binary number\nconst binaryNumber = 0b101010; // 42 in decimal\nconsole.log(binaryNumber); // Output: 42",
+        "description": "In this example, the binary literal 0b101010 represents the decimal number 42."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Callback",
+      "explanation": "A callback is a function that is passed as an argument to another function and is invoked or executed later, usually after some asynchronous operation completes or an event occurs.",
+      "example": {
+        "snippet": "// Example of using a callback function\nfunction fetchData(callback) {\n  setTimeout(() => {\n    const data = 'Data fetched successfully';\n    callback(data);\n  }, 2000);\n}\n\nfetchData(data => {\n  console.log(data);\n});",
+        "description": "In this example, the fetchData function accepts a callback function as an argument and invokes it after fetching data asynchronously."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Closure",
+      "explanation": "A closure is a function that retains access to variables from its parent scope even after the parent function has finished executing. It allows functions to have private data and maintain state.",
+      "example": {
+        "snippet": "// Example of closure\nfunction outer() {\n  const message = 'Hello';\n  return function inner() {\n    console.log(message);\n  };\n}\n\nconst innerFunc = outer();\ninnerFunc(); // Output: Hello",
+        "description": "In this example, the inner function retains access to the 'message' variable declared in the outer function, forming a closure."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Conditional",
+      "explanation": "Conditionals are statements that allow different actions to be taken depending on whether a specific condition evaluates to true or false. They control the flow of execution in a program.",
+      "example": {
+        "snippet": "// Example of using if-else conditional\nconst num = 10;\nif (num > 0) {\n  console.log('Positive');\n} else {\n  console.log('Non-positive');\n}",
+        "description": "In this example, the if-else statement checks if the number 'num' is positive or non-positive and prints the corresponding message."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Constant",
+      "explanation": "A constant is a variable whose value cannot be changed once it has been assigned. It is typically used for values that are intended to remain constant throughout the execution of a program.",
+      "example": {
+        "snippet": "// Example of declaring constants\nconst PI = 3.14159;\nconst MAX_SIZE = 100;\nconsole.log(PI, MAX_SIZE);",
+        "description": "In this example, 'PI' and 'MAX_SIZE' are constants representing the mathematical constant pi and a maximum size limit respectively."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Constructor",
+      "explanation": "A constructor is a special method used to initialize objects of a class in object-oriented programming. It is called automatically when a new instance of the class is created.",
+      "example": {
+        "snippet": "// Example of using a constructor in JavaScript\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n}\n\nconst person1 = new Person('Alice', 30);\nconsole.log(person1.name, person1.age);",
+        "description": "In this example, the Person class has a constructor method that initializes the 'name' and 'age' properties of each Person object."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Data Structure",
+      "explanation": "A data structure is a way of organizing and storing data in a computer so that it can be accessed and manipulated efficiently. Examples include arrays, linked lists, stacks, queues, and trees.",
+      "example": {
+        "snippet": "// Example of using an array data structure\nconst numbers = [1, 2, 3, 4, 5];\nconsole.log(numbers[2]); // Output: 3",
+        "description": "In this example, an array is used to store a sequence of numbers, and the third element of the array is accessed."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Declaration",
+      "explanation": "A declaration is a statement that introduces a new variable, function, class, or other entity into the program's scope. It specifies the name and type of the entity being declared.",
+      "example": {
+        "snippet": "// Example of variable declaration\nlet age;\nconst PI = 3.14159;\n\n// Example of function declaration\nfunction greet() {\n  console.log('Hello!');\n}",
+        "description": "In this example, 'age' is declared as a variable, and 'greet' is declared as a function."
+      }
+    },
+    {
+      "category": "Software Engineering",
+      "title": "Dependency",
+      "explanation": "A dependency is a relationship between two modules, components, or classes where one relies on the other to provide functionality or resources. Managing dependencies is crucial in software development.",
+      "example": {
+        "snippet": "// Example of dependency injection\nclass Logger {\n  log(message) {\n    console.log(message);\n  }\n}\nclass ProductService {\n  constructor(logger) {\n    this.logger = logger;\n  }\n\n  getProduct(id) {\n    this.logger.log('Fetching product with id: ' + id);\n    // Code to fetch product details\n  }\n}\n\nconst logger = new Logger();\nconst productService = new ProductService(logger);",
+        "description": "In this example, the ProductService class depends on the Logger class for logging functionality. Dependency injection is used to provide the Logger instance to the ProductService."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "DOM (Document Object Model)",
+      "explanation": "The Document Object Model (DOM) is a programming interface provided by web browsers that represents the structure of HTML and XML documents as a hierarchical tree of nodes. It allows scripts to dynamically access and modify the content, structure, and style of web pages.",
+      "example": {
+        "snippet": "// Example of DOM manipulation\nconst element = document.getElementById('myElement');\nelement.textContent = 'New text content';",
+        "description": "In this example, the text content of an HTML element with the id 'myElement' is changed dynamically using the DOM."
+      }
+    },
+    {
+      "category": "General Programming",
+      "title": "API (Application Programming Interface)",
+      "explanation": "An API is a set of rules and protocols that allows different software applications to communicate with each other. It defines the methods and data formats that applications can use to request and exchange information.",
+      "example": {
+        "snippet": "// Example of using a web API to fetch data\nfetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error fetching data:', error));",
+        "description": "In this example, the fetch() function is used to make an HTTP request to an API endpoint and retrieve data."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Argument",
+      "explanation": "An argument is a value that is passed to a function when it is called. Functions use arguments to receive input data that they can operate on or process.",
+      "example": {
+        "snippet": "// Example of a function with arguments\nfunction greet(name) {\n  console.log('Hello, ' + name + '!');\n}\ngreet('Alice'); // Output: Hello, Alice!",
+        "description": "In this example, the greet() function takes a 'name' argument and prints a greeting message using that name."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Framework",
+      "explanation": "A framework is a reusable set of libraries, components, and tools that provides a foundation for developing software applications. It simplifies and standardizes common tasks, allowing developers to focus on application-specific logic.",
+      "example": {
+        "snippet": "// Example of using a web framework (Express.js)\nconst express = require('express');\nconst app = express();\n\napp.get('/', (req, res) => {\n  res.send('Hello World!');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+        "description": "In this example, Express.js is a web framework for Node.js used to create web servers and handle HTTP requests and responses."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Garbage Collection",
+      "explanation": "Garbage collection is a mechanism in programming languages that automatically reclaims memory occupied by objects that are no longer in use. It helps prevent memory leaks and ensures efficient memory management.",
+      "example": {
+        "snippet": "// No specific code snippet. Garbage collection is an internal mechanism of programming languages."
+      }
+    },
+    {
+      "category": "Networking",
+      "title": "HTTP (Hypertext Transfer Protocol)",
+      "explanation": "HTTP is an application-layer protocol used for transmitting hypermedia documents, such as HTML, over the internet. It defines methods (e.g., GET, POST) for client-server communication and status codes (e.g., 200 OK, 404 Not Found) for indicating the outcome of requests.",
+      "example": {
+        "snippet": "// Example of making an HTTP request\nfetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error fetching data:', error));",
+        "description": "In this example, the fetch() function is used to make an HTTP GET request to an API endpoint and retrieve data."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "IDE (Integrated Development Environment)",
+      "explanation": "An integrated development environment (IDE) is a software application that provides comprehensive facilities for software development. It typically includes features such as code editor, debugger, compiler, and build automation tools.",
+      "example": {
+        "snippet": "// No specific code snippet. IDEs are software applications used for writing, debugging, and testing code."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Immutable",
+      "explanation": "Immutable objects are objects whose state cannot be modified after they are created. Any attempt to change the state of an immutable object results in the creation of a new object with the modified state.",
+      "example": {
+        "snippet": "// Example of immutable data structure\nconst numbers = [1, 2, 3, 4, 5];\nconst newNumbers = [...numbers, 6];\nconsole.log(newNumbers); // Output: [1, 2, 3, 4, 5, 6]",
+        "description": "In this example, a new array 'newNumbers' is created by adding an element to the existing 'numbers' array without modifying it."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Index",
+      "explanation": "An index is a numeric value that identifies the position of an element in a data structure, such as an array or a string. Indexing allows efficient access to individual elements based on their position.",
+      "example": {
+        "snippet": "// Example of accessing elements by index\nconst colors = ['red', 'green', 'blue'];\nconsole.log(colors[1]); // Output: green",
+        "description": "In this example, the element at index 1 of the 'colors' array is accessed, resulting in the value 'green'."
+      }
+    },
+    {
+      "category": "Data Interchange Format",
+      "title": "JSON (JavaScript Object Notation)",
+      "explanation": "JSON is a lightweight data interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used for transmitting data between a server and a web application.",
+      "example": {
+        "snippet": "// Example of JSON data\nconst person = {\n  'name': 'Alice',\n  'age': 30,\n  'isStudent': false\n};\nconsole.log(JSON.stringify(person)); // Output: {'name':'Alice','age':30,'isStudent':false}",
+        "description": "In this example, a JavaScript object representing a person is converted to a JSON string using the JSON.stringify() method."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Loop",
+      "explanation": "A loop is a programming construct that repeats a block of code multiple times until a specified condition is met. Loops allow automating repetitive tasks and iterating over data structures.",
+      "example": {
+        "snippet": "// Example of a for loop\nfor (let i = 0; i < 5; i++) {\n  console.log(i);\n}\n// Output: 0, 1, 2, 3, 4",
+        "description": "In this example, a for loop is used to iterate from 0 to 4 and print each value of the loop variable 'i'."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Method",
+      "explanation": "A method is a function that is defined inside an object or a class. It represents the behavior or actions that objects of the class can perform.",
+      "example": {
+        "snippet": "// Example of defining a method in JavaScript\nconst person = {\n  name: 'Alice',\n  greet() {\n    console.log('Hello, ' + this.name + '!');\n  }\n};\nperson.greet(); // Output: Hello, Alice!",
+        "description": "In this example, the 'greet' method is defined inside the 'person' object to greet the person by name."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Module",
+      "explanation": "A module is a self-contained unit of software that encapsulates related functions, classes, or variables. It promotes code organization, reusability, and separation of concerns in large-scale applications.",
+      "example": {
+        "snippet": "// Example of using modules in Node.js\n// math.js\nexport function add(a, b) {\n  return a + b;\n}\n\n// app.js\nimport { add } from './math.js';\nconsole.log(add(2, 3)); // Output: 5",
+        "description": "In this example, the math module exports an 'add' function, which is imported and used in the app module."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Object",
+      "explanation": "An object is a collection of key-value pairs that represent a real-world entity or concept. Objects in programming can have properties and methods, making them versatile data structures.",
+      "example": {
+        "snippet": "// Example of creating and using objects in JavaScript\nconst person = {\n  name: 'Alice',\n  age: 30,\n  greet() {\n    console.log('Hello, ' + this.name + '!');\n  }\n};\nconsole.log(person.name); // Output: Alice\nperson.greet(); // Output: Hello, Alice!",
+        "description": "In this example, 'person' is an object with properties ('name' and 'age') and a method ('greet')."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Parameter",
+      "explanation": "A parameter is a variable in a function definition that represents an input value passed to the function when it is called. Parameters allow functions to accept and process different data.",
+      "example": {
+        "snippet": "// Example of function parameters\nfunction greet(name) {\n  console.log('Hello, ' + name + '!');\n}\ngreet('Alice'); // Output: Hello, Alice!",
+        "description": "In this example, 'name' is a parameter of the greet() function, representing the name of the person to greet."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Recursion",
+      "explanation": "Recursion is a programming technique where a function calls itself to solve smaller instances of the same problem. It is useful for tasks that can be broken down into simpler subproblems.",
+      "example": {
+        "snippet": "// Example of recursive function\nfunction factorial(n) {\n  if (n === 0) {\n    return 1;\n  } else {\n    return n * factorial(n - 1);\n  }\n}\nconsole.log(factorial(5)); // Output: 120",
+        "description": "In this example, the factorial function is defined recursively to calculate the factorial of a number."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Scope",
+      "explanation": "Scope defines the visibility and lifetime of variables and other identifiers in a program. It determines where a variable can be accessed and modified within the program.",
+      "example": {
+        "snippet": "// Example of variable scope\nfunction outer() {\n  const message = 'Hello';\n  console.log(message);\n}\nouter(); // Output: Hello\nconsole.log(message); // Error: message is not defined",
+        "description": "In this example, the 'message' variable is defined within the scope of the outer() function and cannot be accessed outside of it."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Syntax",
+      "explanation": "Syntax refers to the set of rules and conventions that define the structure and format of a programming language. It specifies how statements, expressions, and other language constructs are written and interpreted by the compiler or interpreter.",
+      "example": {
+        "snippet": "// Example of JavaScript syntax\nfunction greet(name) {\n  console.log('Hello, ' + name + '!');\n}\ngreet('Alice'); // Output: Hello, Alice!",
+        "description": "In this example, the syntax of the greet() function in JavaScript follows the rules for defining and calling functions."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Class",
+      "explanation": "A class is a blueprint for creating objects in object-oriented programming. It defines the properties (attributes) and behaviors (methods) that all objects of the class will have.",
+      "example": {
+        "snippet": "// Example of defining a class in Python\nclass Person:\n  def __init__(self, name, age):\n    self.name = name\n    self.age = age\n\n  def greet(self):\n    print('Hello, ' + self.name + '!')\n\n# Creating objects of the class\nperson1 = Person('Alice', 30)\nperson2 = Person('Bob', 25)\nperson1.greet() # Output: Hello, Alice!\nperson2.greet() # Output: Hello, Bob!",
+        "description": "In this example, the Person class is defined with properties 'name' and 'age' and a method 'greet' to greet the person."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Inheritance",
+      "explanation": "Inheritance is a mechanism in object-oriented programming where a class (subclass) can inherit properties and behaviors from another class (superclass). It promotes code reuse and establishes a hierarchical relationship between classes.",
+      "example": {
+        "snippet": "// Example of inheritance in Python\n# Superclass\nclass Animal:\n  def sound(self):\n    pass\n\n# Subclass inheriting from Animal\nclass Dog(Animal):\n  def sound(self):\n    print('Woof!')\n\n# Creating object of the subclass\ndog = Dog()\ndog.sound() # Output: Woof!",
+        "description": "In this example, the Dog class inherits the 'sound' method from the Animal class and provides its own implementation."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Interface",
+      "explanation": "An interface is a contract that defines a set of methods or properties that a class must implement. It specifies the behavior expected from classes that implement the interface.",
+      "example": {
+        "snippet": "// Example of interface in Java\ninterface Drawable {\n  void draw();\n}\n\nclass Circle implements Drawable {\n  public void draw() {\n    System.out.println('Drawing circle');\n  }\n}\n\nclass Rectangle implements Drawable {\n  public void draw() {\n    System.out.println('Drawing rectangle');\n  }\n}",
+        "description": "In this example, the Drawable interface defines a draw method, which is implemented by the Circle and Rectangle classes."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Iterator",
+      "explanation": "An iterator is an object that enables iteration over a collection of elements, such as arrays, lists, or sets. It provides methods for sequentially accessing each element of the collection.",
+      "example": {
+        "snippet": "// Example of using an iterator in Python\nnumbers = [1, 2, 3, 4, 5]\niterator = iter(numbers)\n\nprint(next(iterator)) # Output: 1\nprint(next(iterator)) # Output: 2",
+        "description": "In this example, an iterator is created from a list of numbers, and the next() function is used to access each element sequentially."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Library",
+      "explanation": "A library is a collection of precompiled routines, functions, and classes that can be used to perform specific tasks or solve common problems. Libraries promote code reuse and help developers write more efficient and maintainable code.",
+      "example": {
+        "snippet": "// Example of using a library in Python\nimport math\n\nprint(math.sqrt(16)) # Output: 4.0",
+        "description": "In this example, the math library is imported and used to calculate the square root of a number."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Middleware",
+      "explanation": "Middleware is software that sits between an application and the underlying operating system, providing services such as request processing, authentication, logging, and error handling. It enables modular and extensible web application development.",
+      "example": {
+        "snippet": "// Example of using middleware in Node.js (Express.js)\nconst express = require('express');\nconst app = express();\n\n// Middleware function\nfunction logger(req, res, next) {\n  console.log(`${req.method} ${req.url}`);\n  next();\n}\n\napp.use(logger);\n// Other routes and middleware\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+        "description": "In this example, a logger middleware function is defined and used to log HTTP requests before passing them to the next middleware or route handler."
+      }
+    },
+    {
+      "category": "Concurrency Control",
+      "title": "Mutex (Mutual Exclusion)",
+      "explanation": "A mutex (mutual exclusion) is a synchronization primitive used to prevent multiple threads or processes from simultaneously accessing shared resources or critical sections of code. It ensures that only one thread or process can access the resource at a time.",
+      "example": {
+        "snippet": "// Example of using mutex in C++ (with std::mutex)\n#include <iostream>\n#include <thread>\n#include <mutex>\n\nstd::mutex mtx;\n\nvoid printNumbers() {\n  mtx.lock();\n  for (int i = 0; i < 5; ++i) {\n    std::cout << i << std::endl;\n  }\n  mtx.unlock();\n}\n\nint main() {\n  std::thread t1(printNumbers);\n  std::thread t2(printNumbers);\n  t1.join();\n  t2.join();\n  return 0;\n}",
+        "description": "In this example, a mutex is used to synchronize access to the 'cout' object within the printNumbers function, ensuring that the output is not interleaved."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Namespace",
+      "explanation": "A namespace is a declarative region that provides a scope for the identifiers (such as variables, functions, classes) declared within it. It helps avoid naming conflicts and organizes code into logical units.",
+      "example": {
+        "snippet": "// Example of namespace in C++\n#include <iostream>\n\nnamespace Math {\n  int add(int a, int b) {\n    return a + b;\n  }\n}\n\nint main() {\n  std::cout << Math::add(2, 3) << std::endl; // Output: 5\n  return 0;\n}",
+        "description": "In this example, the add function is defined within the Math namespace, and it is accessed using the scope resolution operator (::)."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Null Pointer",
+      "explanation": "A null pointer is a pointer variable that does not point to any memory location. It represents the absence of a valid target object or location and is commonly used to indicate a lack of value or uninitialized state.",
+      "example": {
+        "snippet": "// Example of null pointer in C++\nint* ptr = nullptr; // Null pointer\n\nif (ptr == nullptr) {\n  std::cout << 'Pointer is null' << std::endl;\n}",
+        "description": "In this example, the 'ptr' pointer is initialized to nullptr, indicating that it does not point to any valid memory location."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Operator Overloading",
+      "explanation": "Operator overloading is a feature of some programming languages that allows operators to be redefined or extended for user-defined types. It enables custom behavior for operators such as +, -, *, and /.",
+      "example": {
+        "snippet": "// Example of operator overloading in C++\nclass Complex {\npublic:\n  Complex(double real, double imag) : real(real), imag(imag) {}\n  Complex operator+(const Complex& other) const {\n    return Complex(real + other.real, imag + other.imag);\n  }\n\nprivate:\n  double real;\n  double imag;\n};",
+        "description": "In this example, the + operator is overloaded for the Complex class to perform addition of complex numbers."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Polymorphism",
+      "explanation": "Polymorphism is the ability of objects to take on multiple forms or have multiple behaviors depending on their data type or class. It enables code to work with objects of different types through a uniform interface.",
+      "example": {
+        "snippet": "// Example of polymorphism in Java (method overriding)\nclass Animal {\n  void sound() {\n    System.out.println('Animal makes a sound');\n  }\n}\n\nclass Dog extends Animal {\n  void sound() {\n    System.out.println('Dog barks');\n  }\n}\n\nAnimal animal = new Dog();\nanimal.sound(); // Output: Dog barks",
+        "description": "In this example, the sound() method is overridden in the Dog class to provide a different implementation than the superclass Animal."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Queue",
+      "explanation": "A queue is a linear data structure that follows the FIFO (First-In-First-Out) principle, where elements are inserted at the rear and removed from the front. It models a real-world queue or line.",
+      "example": {
+        "snippet": "// Example of queue data structure\nconst queue = [];\nqueue.push(1); // Enqueue\nqueue.push(2);\nconst front = queue.shift(); // Dequeue\nconsole.log(front); // Output: 1",
+        "description": "In this example, a queue is implemented using an array, and elements are enqueued at the end and dequeued from the front."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Stack",
+      "explanation": "A stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle, where elements are inserted and removed from the same end, known as the top. It models a real-world stack of objects.",
+      "example": {
+        "snippet": "// Example of stack data structure\nconst stack = [];\nstack.push(1); // Push\nstack.push(2);\nconst top = stack.pop(); // Pop\nconsole.log(top); // Output: 2",
+        "description": "In this example, a stack is implemented using an array, and elements are pushed onto the top and popped off from the top."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Type Casting",
+      "explanation": "Type casting is the process of converting the data type of an object or value into another data type. It allows compatibility between different data types and enables operations that require specific data types.",
+      "example": {
+        "snippet": "// Example of type casting in Java\nint x = 10;\ndouble y = (double)x; // Casting int to double\nSystem.out.println(y); // Output: 10.0",
+        "description": "In this example, the value of 'x' is casted from an integer to a double to perform floating-point arithmetic."
+      }
+    },
+    {
+      "category": "Character Encoding",
+      "title": "Unicode",
+      "explanation": "Unicode is a universal character encoding standard that assigns unique numeric codes to characters from all writing systems and symbols used in computers. It supports representation of text in multiple languages and scripts.",
+      "example": {
+        "snippet": "// Example of Unicode character\nconst euroSymbol = '€'; // Euro symbol\nconsole.log(euroSymbol); // Output: €",
+        "description": "In this example, the Unicode escape sequence '€' represents the Euro symbol, which is displayed as '€'."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Exception",
+      "explanation": "An exception is an event that occurs during the execution of a program that disrupts the normal flow of control. Exceptions are typically caused by errors or unexpected conditions and can be handled using exception handling mechanisms.",
+      "example": {
+        "snippet": "// Example of exception handling\ntry {\n  // Code that may throw an exception\n  throw new Error('Something went wrong');\n} catch (error) {\n  console.error('Error:', error.message);\n}",
+        "description": "In this example, the try-catch block is used to catch and handle an error that occurs during the execution of the program."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Expression",
+      "explanation": "An expression is a combination of values, variables, operators, and function calls that evaluates to a single value. Expressions can be simple or complex and are used extensively in programming.",
+      "example": {
+        "snippet": "// Example of expressions\nconst sum = 10 + 5;\nconst isAdult = age >= 18;\nconst message = 'Hello, ' + name;",
+        "description": "In this example, 'sum', 'isAdult', and 'message' are expressions that evaluate to a single value."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Stack",
+      "explanation": "A stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle, where elements are inserted and removed from the same end, known as the top. It models a real-world stack of objects.",
+      "example": {
+        "snippet": "// Example of stack data structure\nconst stack = [];\nstack.push(1); // Push\nstack.push(2);\nconst top = stack.pop(); // Pop\nconsole.log(top); // Output: 2",
+        "description": "In this example, a stack is implemented using an array, and elements are pushed onto the top and popped off from the top."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Type Casting",
+      "explanation": "Type casting is the process of converting the data type of an object or value into another data type. It allows compatibility between different data types and enables operations that require specific data types.",
+      "example": {
+        "snippet": "// Example of type casting in Java\nint x = 10;\ndouble y = (double)x; // Casting int to double\nSystem.out.println(y); // Output: 10.0",
+        "description": "In this example, the value of 'x' is casted from an integer to a double to perform floating-point arithmetic."
+      }
+    },
+    {
+      "category": "Character Encoding",
+      "title": "Unicode",
+      "explanation": "Unicode is a universal character encoding standard that assigns unique numeric codes to characters from all writing systems and symbols used in computers. It supports representation of text in multiple languages and scripts.",
+      "example": {
+        "snippet": "// Example of Unicode character\nconst euroSymbol = '€'; // Euro symbol\nconsole.log(euroSymbol); // Output: €",
+        "description": "In this example, the Unicode escape sequence '€' represents the Euro symbol, which is displayed as '€'."
+      }
+    },
+    {
+      "category": "Programming Fundamentals",
+      "title": "Variable",
+      "explanation": "A variable is a named storage location in computer memory that holds a value. Variables are used to store and manipulate data within a program, and their values can change during the execution of the program.",
+      "example": {
+        "snippet": "// Example of variable declaration and assignment\nlet age = 30;\nconst PI = 3.14159;",
+        "description": "In this example, 'age' and 'PI' are variables that store numeric values."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Binary Tree",
+      "explanation": "A binary tree is a hierarchical data structure composed of nodes, where each node has at most two children, referred to as the left child and the right child. It is commonly used for efficient searching and sorting operations.",
+      "example": {
+        "snippet": "// No specific code snippet. Binary trees are typically implemented using classes or structs with left and right pointers."
+      }
+    },
+    {
+      "category": "Algorithm",
+      "title": "Bubble Sort",
+      "explanation": "Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. It has a time complexity of O(n^2) and is inefficient for large datasets.",
+      "example": {
+        "snippet": "// Example of bubble sort algorithm\nfunction bubbleSort(arr) {\n  const n = arr.length;\n  for (let i = 0; i < n; i++) {\n    for (let j = 0; j < n - i - 1; j++) {\n      if (arr[j] > arr[j + 1]) {\n        // Swap arr[j] and arr[j+1]\n        let temp = arr[j];\n        arr[j] = arr[j + 1];\n        arr[j + 1] = temp;\n      }\n    }\n  }\n  return arr;\n}\n\nconst array = [5, 3, 8, 4, 2];\nconsole.log(bubbleSort(array)); // Output: [2, 3, 4, 5, 8]",
+        "description": "In this example, the bubbleSort function sorts an array of numbers using the bubble sort algorithm."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Callback Function",
+      "explanation": "A callback function is a function that is passed as an argument to another function and is executed after a specific event or task is completed. It enables asynchronous programming and is commonly used in event handling and asynchronous operations.",
+      "example": {
+        "snippet": "// Example of callback function in JavaScript\nfunction fetchData(callback) {\n  // Asynchronous operation to fetch data\n  setTimeout(() => {\n    const data = 'Data fetched';\n    callback(data);\n  }, 2000);\n}\n\nfunction processData(data) {\n  console.log(data);\n}\n\nfetchData(processData);",
+        "description": "In this example, the fetchData function asynchronously fetches data and invokes the processData callback function when the operation is completed."
+      }
+    },
+    {
+      "category": "Networking",
+      "title": "Client-Server Architecture",
+      "explanation": "Client-server architecture is a computing model where client devices (such as computers, smartphones) communicate with central servers over a network. Clients request services or resources from servers, which process and respond to the requests.",
+      "example": {
+        "snippet": "// No specific code snippet. Client-server architecture involves communication between client and server components over a network."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Closure",
+      "explanation": "A closure is a function bundled together with its lexical environment (the set of variables, functions, and context in which it was created). It allows functions to retain access to variables from the scope in which they were defined, even after that scope has closed.",
+      "example": {
+        "snippet": "// Example of closure in JavaScript\nfunction outerFunction() {\n  let count = 0;\n  function innerFunction() {\n    count++;\n    console.log(count);\n  }\n  return innerFunction;\n}\n\nconst increment = outerFunction();\nincrement(); // Output: 1\nincrement(); // Output: 2",
+        "description": "In this example, the innerFunction forms a closure over the 'count' variable in the scope of outerFunction, allowing it to retain and increment the value of 'count' between function calls."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Concurrency",
+      "explanation": "Concurrency is the ability of a system to execute multiple tasks or processes simultaneously, making efficient use of available resources. It enables applications to perform parallel execution of tasks, improving performance and responsiveness.",
+      "example": {
+        "snippet": "// No specific code snippet. Concurrency involves executing multiple tasks or processes concurrently."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Constructor",
+      "explanation": "A constructor is a special type of method in a class that is automatically called when an instance (object) of the class is created. It is used to initialize object properties or perform setup tasks.",
+      "example": {
+        "snippet": "// Example of constructor in Java\npublic class Person {\n  String name;\n\n  // Constructor\n  public Person(String name) {\n    this.name = name;\n  }\n\n  public static void main(String[] args) {\n    // Creating an instance of the class\n    Person person = new Person('John');\n    System.out.println(person.name); // Output: John\n  }\n}",
+        "description": "In this example, the Person class has a constructor that initializes the 'name' property when an instance of the class is created."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "CSS (Cascading Style Sheets)",
+      "explanation": "CSS is a style sheet language used for describing the presentation of web pages written in HTML or XML. It defines styles such as layout, colors, fonts, and animations, enabling web designers to control the appearance and layout of web content.",
+      "example": {
+        "snippet": "/* Example of CSS styling */\nbody {\n  font-family: Arial, sans-serif;\n  background-color: #f0f0f0;\n}\n\nh1 {\n  color: blue;\n  text-align: center;\n}",
+        "description": "In this example, CSS is used to style the body element with a specific font-family and background color, and the h1 element with blue color and centered text alignment."
+      }
+    },
+    {
+      "category": "Data Management",
+      "title": "Database",
+      "explanation": "A database is an organized collection of structured data stored electronically in a computer system. It allows data to be easily accessed, managed, and updated, providing efficient storage and retrieval mechanisms.",
+      "example": {
+        "snippet": "// No specific code snippet. Databases are systems used for storing and managing structured data."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Debugging",
+      "explanation": "Debugging is the process of identifying and fixing errors, bugs, or defects in software code. It involves analyzing program behavior, identifying the cause of issues, and implementing solutions to correct them.",
+      "example": {
+        "snippet": "// No specific code snippet. Debugging involves analyzing and fixing issues in software code."
+      }
+    },
+    {
+      "category": "Containerization",
+      "title": "Docker",
+      "explanation": "Docker is a platform for developing, shipping, and running applications in containers. Containers are lightweight, portable, and self-contained environments that encapsulate application code, runtime, libraries, and dependencies.",
+      "example": {
+        "snippet": "// No specific code snippet. Docker is a platform for containerizing and deploying applications."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Exception Handling",
+      "explanation": "Exception handling is a programming mechanism for handling errors, exceptional conditions, or unexpected events that occur during the execution of a program. It allows developers to gracefully manage errors and prevent program crashes.",
+      "example": {
+        "snippet": "// Example of exception handling in Java\ntry {\n  // Code that may throw an exception\n  throw new Exception('Something went wrong');\n} catch (Exception e) {\n  System.out.println('Error: ' + e.getMessage());\n}",
+        "description": "In this example, the try-catch block is used to catch and handle an exception that may occur during the execution of the program."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Frontend",
+      "explanation": "The frontend refers to the user interface or presentation layer of a software application, typically involving web technologies such as HTML, CSS, and JavaScript. It interacts directly with users and displays content and features.",
+      "example": {
+        "snippet": "<!-- Example of HTML frontend -->\n<!DOCTYPE html>\n<html>\n<head>\n  <title>My Website</title>\n  <link rel='stylesheet' href='styles.css'>\n</head>\n<body>\n  <h1>Welcome to My Website</h1>\n  <p>This is the homepage of my website.</p>\n  <script src='script.js'></script>\n</body>\n</html>",
+        "description": "In this example, an HTML document serves as the frontend of a website, defining its structure and content."
+      }
+    },
+    {
+      "category": "Programming Paradigm",
+      "title": "Functional Programming",
+      "explanation": "Functional programming is a programming paradigm that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data. It emphasizes the use of pure functions, immutability, and higher-order functions.",
+      "example": {
+        "snippet": "// Example of functional programming in JavaScript\nconst numbers = [1, 2, 3, 4, 5];\nconst doubled = numbers.map(x => x * 2); // Using higher-order function 'map'\nconsole.log(doubled); // Output: [2, 4, 6, 8, 10]",
+        "description": "In this example, the map function is used to apply a transformation to each element of an array, demonstrating the functional programming approach."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Hash Table",
+      "explanation": "A hash table is a data structure that implements an associative array abstract data type, a structure that can map keys to values. It uses a hash function to compute an index into an array of buckets or slots, from which the desired value can be found.",
+      "example": {
+        "snippet": "// No specific code snippet. Hash tables are typically implemented using arrays and hash functions."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "HTML (Hypertext Markup Language)",
+      "explanation": "HTML is the standard markup language for creating web pages and web applications. It defines the structure and layout of web content using a system of tags and attributes.",
+      "example": {
+        "snippet": "<!-- Example of HTML markup -->\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Hello, World!</title>\n</head>\n<body>\n  <h1>Hello, World!</h1>\n  <p>This is a paragraph.</p>\n</body>\n</html>",
+        "description": "In this example, HTML markup is used to define the structure and content of a simple web page."
+      }
+    },
+    {
+      "category": "Networking",
+      "title": "HTTP (Hypertext Transfer Protocol)",
+      "explanation": "HTTP is an application-layer protocol used for transmitting hypermedia documents, such as HTML, over the internet. It defines methods (e.g., GET, POST) for client-server communication and status codes (e.g., 200 OK, 404 Not Found) for indicating the outcome of requests.",
+      "example": {
+        "snippet": "// Example of making an HTTP request\nfetch('https://api.example.com/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error('Error fetching data:', error));",
+        "description": "In this example, the fetch() function is used to make an HTTP GET request to an API endpoint and retrieve data."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "IDE (Integrated Development Environment)",
+      "explanation": "An integrated development environment (IDE) is a software application that provides comprehensive facilities for software development. It typically includes features such as code editor, debugger, compiler, and build automation tools.",
+      "example": {
+        "snippet": "// No specific code snippet. IDEs are software applications used for writing, debugging, and testing code."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Immutable",
+      "explanation": "Immutable means unchangeable or unable to be modified. In programming, immutable objects or data structures cannot be altered after they are created, which helps prevent unintended changes and simplifies reasoning about program behavior.",
+      "example": {
+        "snippet": "// Example of immutable data structure in JavaScript (using libraries like Immutable.js)\nconst map1 = Immutable.Map({ key: 'value' });\nconst map2 = map1.set('key', 'new value');\nconsole.log(map1.get('key')); // Output: value\nconsole.log(map2.get('key')); // Output: new value",
+        "description": "In this example, the Immutable.js library is used to create and manipulate an immutable map data structure."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Inheritance",
+      "explanation": "Inheritance is a mechanism in object-oriented programming where a class (subclass) can inherit properties and behaviors from another class (superclass). It promotes code reuse and establishes a hierarchical relationship between classes.",
+      "example": {
+        "snippet": "// Example of inheritance in Python\n# Superclass\nclass Animal:\n  def sound(self):\n    pass\n\n# Subclass inheriting from Animal\nclass Dog(Animal):\n  def sound(self):\n    print('Woof!')\n\n# Creating object of the subclass\ndog = Dog()\ndog.sound() # Output: Woof!",
+        "description": "In this example, the Dog class inherits the 'sound' method from the Animal class and provides its own implementation."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Interface",
+      "explanation": "An interface is a contract that defines a set of methods or properties that a class must implement. It specifies the behavior expected from classes that implement the interface.",
+      "example": {
+        "snippet": "// Example of interface in Java\ninterface Drawable {\n  void draw();\n}\n\nclass Circle implements Drawable {\n  public void draw() {\n    System.out.println('Drawing circle');\n  }\n}\n\nclass Rectangle implements Drawable {\n  public void draw() {\n    System.out.println('Drawing rectangle');\n  }\n}",
+        "description": "In this example, the Drawable interface defines a draw method, which is implemented by the Circle and Rectangle classes."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Iterator",
+      "explanation": "An iterator is an object that enables iteration over a collection of elements, such as arrays, lists, or sets. It provides methods for sequentially accessing each element of the collection.",
+      "example": {
+        "snippet": "// Example of using an iterator in Python\nnumbers = [1, 2, 3, 4, 5]\niterator = iter(numbers)\n\nprint(next(iterator)) # Output: 1\nprint(next(iterator)) # Output: 2",
+        "description": "In this example, an iterator is created from a list of numbers, and the next() function is used to access each element sequentially."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Library",
+      "explanation": "A library is a collection of precompiled routines, functions, and classes that can be used to perform specific tasks or solve common problems. Libraries promote code reuse and help developers write more efficient and maintainable code.",
+      "example": {
+        "snippet": "// Example of using a library in Python\nimport math\n\nprint(math.sqrt(16)) # Output: 4.0",
+        "description": "In this example, the math library is imported and used to calculate the square root of a number."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Middleware",
+      "explanation": "Middleware is software that sits between an application and the underlying operating system, providing services such as request processing, authentication, logging, and error handling. It enables modular and extensible web application development.",
+      "example": {
+        "snippet": "// Example of using middleware in Node.js (Express.js)\nconst express = require('express');\nconst app = express();\n\n// Middleware function\nfunction logger(req, res, next) {\n  console.log(`${req.method} ${req.url}`);\n  next();\n}\n\napp.use(logger);\n// Other routes and middleware\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+        "description": "In this example, a logger middleware function is defined and used to log HTTP requests before passing them to the next middleware or route handler."
+      }
+    },
+    {
+      "category": "Concurrency Control",
+      "title": "Mutex (Mutual Exclusion)",
+      "explanation": "A mutex (mutual exclusion) is a synchronization primitive used to prevent multiple threads or processes from simultaneously accessing shared resources or critical sections of code. It ensures that only one thread or process can access the resource at a time.",
+      "example": {
+        "snippet": "// Example of using mutex in C++ (with std::mutex)\n#include <iostream>\n#include <thread>\n#include <mutex>\n\nstd::mutex mtx;\n\nvoid printNumbers() {\n  mtx.lock();\n  for (int i = 0; i < 5; ++i) {\n    std::cout << i << std::endl;\n  }\n  mtx.unlock();\n}\n\nint main() {\n  std::thread t1(printNumbers);\n  std::thread t2(printNumbers);\n  t1.join();\n  t2.join();\n  return 0;\n}",
+        "description": "In this example, a mutex is used to synchronize access to the 'cout' object within the printNumbers function, ensuring that the output is not interleaved."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Namespace",
+      "explanation": "A namespace is a declarative region that provides a scope for the identifiers (such as variables, functions, classes) declared within it. It helps avoid naming conflicts and organizes code into logical units.",
+      "example": {
+        "snippet": "// Example of namespace in C++\n#include <iostream>\n\nnamespace Math {\n  int add(int a, int b) {\n    return a + b;\n  }\n}\n\nint main() {\n  std::cout << Math::add(2, 3) << std::endl; // Output: 5\n  return 0;\n}",
+        "description": "In this example, the add function is defined within the Math namespace, and it is accessed using the scope resolution operator (::)."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Null Pointer",
+      "explanation": "A null pointer is a pointer variable that does not point to any memory location. It represents the absence of a valid target object or location and is commonly used to indicate a lack of value or uninitialized state.",
+      "example": {
+        "snippet": "// Example of null pointer in C++\nint* ptr = nullptr; // Null pointer\n\nif (ptr == nullptr) {\n  std::cout << 'Pointer is null' << std::endl;\n}",
+        "description": "In this example, the 'ptr' pointer is initialized to nullptr, indicating that it does not point to any valid memory location."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Operator Overloading",
+      "explanation": "Operator overloading is a feature of some programming languages that allows operators to be redefined or extended for user-defined types. It enables custom behavior for operators such as +, -, *, and /.",
+      "example": {
+        "snippet": "// Example of operator overloading in C++\nclass Complex {\npublic:\n  Complex(double real, double imag) : real(real), imag(imag) {}\n  Complex operator+(const Complex& other) const {\n    return Complex(real + other.real, imag + other.imag);\n  }\n\nprivate:\n  double real;\n  double imag;\n};",
+        "description": "In this example, the + operator is overloaded for the Complex class to perform addition of complex numbers."
+      }
+    },
+    {
+      "category": "Object-Oriented Programming",
+      "title": "Polymorphism",
+      "explanation": "Polymorphism is the ability of objects to take on multiple forms or have multiple behaviors depending on their data type or class. It enables code to work with objects of different types through a uniform interface.",
+      "example": {
+        "snippet": "// Example of polymorphism in Java (method overriding)\nclass Animal {\n  void sound() {\n    System.out.println('Animal makes a sound');\n  }\n}\n\nclass Dog extends Animal {\n  void sound() {\n    System.out.println('Dog barks');\n  }\n}\n\nAnimal animal = new Dog();\nanimal.sound(); // Output: Dog barks",
+        "description": "In this example, the sound() method is overridden in the Dog class to provide a different implementation than the superclass Animal."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Queue",
+      "explanation": "A queue is a linear data structure that follows the FIFO (First-In-First-Out) principle, where elements are inserted at the rear and removed from the front. It models a real-world queue or line.",
+      "example": {
+        "snippet": "// Example of queue data structure\nconst queue = [];\nqueue.push(1); // Enqueue\nqueue.push(2);\nconst front = queue.shift(); // Dequeue\nconsole.log(front); // Output: 1",
+        "description": "In this example, a queue is implemented using an array, and elements are enqueued at the end and dequeued from the front."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Recursion",
+      "explanation": "Recursion is a programming technique where a function calls itself directly or indirectly to solve a problem. It is often used to break down complex problems into simpler subproblems and is a fundamental part of many algorithms.",
+      "example": {
+        "snippet": "// Example of recursive function to calculate factorial in JavaScript\nfunction factorial(n) {\n  if (n === 0 || n === 1) {\n    return 1;\n  } else {\n    return n * factorial(n - 1);\n  }\n}\n\nconsole.log(factorial(5)); // Output: 120",
+        "description": "In this example, the factorial function is defined recursively to calculate the factorial of a number."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "REST (Representational State Transfer)",
+      "explanation": "REST is an architectural style for designing networked applications, especially web services, that relies on a stateless communication protocol, typically HTTP. It emphasizes a uniform interface, resource-based interactions, and stateless communication.",
+      "example": {
+        "snippet": "// No specific code snippet. RESTful APIs adhere to the principles of REST architecture for designing web services."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Routing",
+      "explanation": "Routing is the process of determining how an application responds to client requests for specific endpoints (URIs). It involves matching the request URL to the corresponding action or handler that generates the response.",
+      "example": {
+        "snippet": "// Example of routing in Node.js (Express.js)\nconst express = require('express');\nconst app = express();\n\n// Route handler for GET request to the homepage\napp.get('/', (req, res) => {\n  res.send('Hello, World!');\n});\n\n// Route handler for POST request to the /submit endpoint\napp.post('/submit', (req, res) => {\n  res.send('Data submitted successfully');\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+        "description": "In this example, route handlers are defined for GET and POST requests to different endpoints using Express.js."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Runtime Environment",
+      "explanation": "A runtime environment is the environment in which a software application executes or runs. It includes the hardware, operating system, libraries, and other resources required for running the application.",
+      "example": {
+        "snippet": "// No specific code snippet. The runtime environment encompasses the environment in which a program executes."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Scope",
+      "explanation": "Scope refers to the visibility and lifetime of variables within a program. It defines where in the code a variable can be accessed or referenced and whether it exists only within a specific block, function, or globally.",
+      "example": {
+        "snippet": "// Example of variable scope in JavaScript\nfunction myFunction() {\n  let localVar = 'I am a local variable'; // Local variable\n  console.log(localVar);\n}\n\nmyFunction(); // Output: I am a local variable\nconsole.log(localVar); // Error: localVar is not defined",
+        "description": "In this example, 'localVar' is a local variable within the myFunction scope and cannot be accessed outside of it."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Search Engine Optimization (SEO)",
+      "explanation": "Search engine optimization (SEO) is the process of improving the visibility and ranking of a website or web page in search engine results pages (SERPs). It involves optimizing content, meta tags, site structure, and other factors to increase organic (non-paid) traffic.",
+      "example": {
+        "snippet": "// No specific code snippet. SEO involves optimizing various aspects of a website to improve its search engine ranking."
+      }
+    },
+    {
+      "category": "Programming Concept",
+      "title": "Serialization",
+      "explanation": "Serialization is the process of converting objects or data structures into a format that can be easily stored, transmitted, or reconstructed later. It enables data persistence, inter-process communication, and distributed computing.",
+      "example": {
+        "snippet": "// Example of object serialization in Java\nimport java.io.*;\n\nclass Person implements Serializable {\n  String name;\n  int age;\n\n  public Person(String name, int age) {\n    this.name = name;\n    this.age = age;\n  }\n}\n\npublic class Main {\n  public static void main(String[] args) {\n    try {\n      Person person = new Person('John', 30);\n      FileOutputStream fileOut = new FileOutputStream('person.ser');\n      ObjectOutputStream out = new ObjectOutputStream(fileOut);\n      out.writeObject(person);\n      out.close();\n      fileOut.close();\n      System.out.println('Object has been serialized');\n    } catch (IOException e) {\n      e.printStackTrace();\n    }\n  }\n}",
+        "description": "In this example, a Person object is serialized and written to a file named 'person.ser' using Java's serialization mechanism."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Session",
+      "explanation": "A session is a temporary and interactive information exchange between two or more communicating devices or systems. In web development, sessions are used to maintain stateful information about a user's interactions with a web application across multiple requests.",
+      "example": {
+        "snippet": "// Example of using sessions in Node.js (Express.js)\nconst express = require('express');\nconst session = require('express-session');\nconst app = express();\n\napp.use(session({\n  secret: 'mysecret',\n  resave: false,\n  saveUninitialized: true\n}));\n\napp.get('/', (req, res) => {\n  if (req.session.views) {\n    req.session.views++;\n    res.send('You visited this page ' + req.session.views + ' times');\n  } else {\n    req.session.views = 1;\n    res.send('Welcome to this page for the first time');\n  }\n});\n\napp.listen(3000, () => {\n  console.log('Server is running on port 3000');\n});",
+        "description": "In this example, sessions are used to track the number of times a user visits a web page using Express.js middleware."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Software Development Life Cycle (SDLC)",
+      "explanation": "The software development life cycle (SDLC) is a systematic process for developing software applications, from initial planning and requirements analysis through design, coding, testing, deployment, and maintenance. It provides a framework for managing and controlling software projects.",
+      "example": {
+        "snippet": "// No specific code snippet. SDLC encompasses various phases and processes involved in developing software applications."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Source Control",
+      "explanation": "Source control, also known as version control or revision control, is the practice of tracking and managing changes to source code, documents, or any collection of files. It enables collaboration, coordination, and version management among developers working on the same project.",
+      "example": {
+        "snippet": "// No specific code snippet. Source control systems like Git are used to track changes to source code and collaborate with other developers."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Stack",
+      "explanation": "A stack is a linear data structure that follows the LIFO (Last-In-First-Out) principle, where elements are inserted (pushed) and removed (popped) from the same end, called the top. It models a real-world stack or pile.",
+      "example": {
+        "snippet": "// Example of stack data structure\nconst stack = [];\nstack.push(1); // Push\nstack.push(2);\nconst top = stack.pop(); // Pop\nconsole.log(top); // Output: 2",
+        "description": "In this example, a stack is implemented using an array, and elements are pushed onto the top and popped from the top."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "State Management",
+      "explanation": "State management is the process of managing the state (data and behavior) of a software application or system. It involves maintaining, updating, and synchronizing the state across different components or modules of the application.",
+      "example": {
+        "snippet": "// No specific code snippet. State management involves managing the state of a software application or system."
+      }
+    },
+    {
+      "category": "Database",
+      "title": "Structured Query Language (SQL)",
+      "explanation": "Structured Query Language (SQL) is a standard language for managing and manipulating relational databases. It provides commands for querying data (SELECT), modifying data (INSERT, UPDATE, DELETE), and defining database schema (CREATE, ALTER, DROP).",
+      "example": {
+        "snippet": "-- Example of SQL query\nSELECT * FROM Customers WHERE Country = 'USA';",
+        "description": "In this example, an SQL query is used to retrieve all customers from the 'Customers' table where the country is 'USA'."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Test-Driven Development (TDD)",
+      "explanation": "Test-driven development (TDD) is a software development approach where tests are written before the implementation code. It follows a cycle of writing failing tests, writing code to pass the tests, and then refactoring the code while ensuring all tests pass.",
+      "example": {
+        "snippet": "// Example of test-driven development in JavaScript (using Jest)\n// Test file (e.g., test.js)\nconst sum = require('./sum');\n\ntest('adds 1 + 2 to equal 3', () => {\n  expect(sum(1, 2)).toBe(3);\n});\n\n// Implementation file (e.g., sum.js)\nfunction sum(a, b) {\n  return a + b;\n}\n\nmodule.exports = sum;",
+        "description": "In this example, a test file is written first to define the behavior of a function, followed by the implementation of the function to make the tests pass."
+      }
+    },
+    {
+      "category": "Data Structure",
+      "title": "Tree",
+      "explanation": "A tree is a hierarchical data structure consisting of nodes connected by edges. It has a root node at the top and each node has zero or more child nodes. Trees are used to represent hierarchical relationships and are commonly used in computer science algorithms and data structures.",
+      "example": {
+        "snippet": "// No specific code snippet. Trees are hierarchical data structures that can be represented and manipulated using various algorithms."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "User Authentication",
+      "explanation": "User authentication is the process of verifying the identity of a user attempting to access a system or application. It typically involves validating credentials (e.g., username and password) provided by the user against stored credentials in a database.",
+      "example": {
+        "snippet": "// No specific code snippet. User authentication involves validating user credentials during the login process."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "User Interface (UI)",
+      "explanation": "The user interface (UI) is the point of interaction between users and a computer program. It encompasses graphical elements such as buttons, menus, forms, and layout design that allow users to interact with and control the software.",
+      "example": {
+        "snippet": "// No specific code snippet. User interface design involves creating graphical elements and layouts to enhance user interaction and experience."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "User Experience (UX)",
+      "explanation": "User experience (UX) refers to the overall experience of a user when interacting with a product or system, including its usability, accessibility, and satisfaction. UX design aims to enhance user satisfaction by improving the usability and accessibility of products.",
+      "example": {
+        "snippet": "// No specific code snippet. User experience design focuses on improving the overall usability and satisfaction of users when interacting with products or systems."
+      }
+    },
+    {
+      "category": "Software Development",
+      "title": "Versioning",
+      "explanation": "Versioning is the practice of assigning unique identifiers or numbers to different versions or releases of a software application or component. It helps track changes, manage releases, and facilitate collaboration among developers.",
+      "example": {
+        "snippet": "// No specific code snippet. Versioning involves assigning unique identifiers or numbers to software versions or releases."
+      }
+    },
+    {
+      "category": "Virtualization",
+      "title": "Virtual Machine (VM)",
+      "explanation": "A virtual machine (VM) is an emulation of a computer system that runs as software on a physical host machine. It allows multiple operating systems to run concurrently on a single physical machine, providing isolation, flexibility, and resource management.",
+      "example": {
+        "snippet": "// No specific code snippet. Virtual machines emulate computer systems and provide isolated environments for running multiple operating systems on a single physical machine."
+      }
+    },
+    {
+      "category": "Networking",
+      "title": "Web Server",
+      "explanation": "A web server is software or hardware that serves web content (such as HTML pages, images, and files) to clients over the internet. It handles client requests, processes them, and sends back the requested resources.",
+      "example": {
+        "snippet": "// No specific code snippet. Web servers are software or hardware systems responsible for serving web content to clients over the internet."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "Web Socket",
+      "explanation": "WebSocket is a communication protocol that provides full-duplex communication channels over a single TCP connection. It enables interactive communication between a client and a server, allowing messages to be sent back and forth in real-time.",
+      "example": {
+        "snippet": "// Example of using WebSockets in JavaScript (client-side)\nconst socket = new WebSocket('ws://localhost:8080');\n\nsocket.onopen = () => {\n  console.log('WebSocket connection established');\n  socket.send('Hello, Server!');\n};\n\nsocket.onmessage = (event) => {\n  console.log('Message from server:', event.data);\n};",
+        "description": "In this example, a WebSocket connection is established in the client-side JavaScript code, and messages are sent and received between the client and server."
+      }
+    },
+    {
+      "category": "Web Development",
+      "title": "XML (eXtensible Markup Language)",
+      "explanation": "XML is a markup language that defines a set of rules for encoding documents in a format that is both human-readable and machine-readable. It is commonly used for representing structured data in web applications and exchanging data between different systems.",
+      "example": {
+        "snippet": "<!-- Example of XML document -->\n<bookstore>\n  <book category='fiction'>\n    <title>Harry Potter</title>\n    <author>J.K. Rowling</author>\n    <price>29.99</price>\n  </book>\n  <book category='non-fiction'>\n    <title>Learning XML</title>\n    <author>Erik T. Ray</author>\n    <price>39.95</price>\n  </book>\n</bookstore>",
+        "description": "In this example, an XML document represents information about books in a bookstore."
+      }
+    },
+    {
+      "category": "Web Security",
+      "title": "XSS (Cross-Site Scripting)",
+      "explanation": "Cross-Site Scripting (XSS) is a security vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. It occurs when untrusted data is included in a web page without proper validation or escaping.",
+      "example": {
+        "snippet": "// Example of XSS vulnerability in JavaScript\nconst userInput = '<script>alert('XSS');</script>';\ndocument.getElementById('output').innerHTML = userInput;",
+        "description": "In this example, the userInput variable contains a script tag with a JavaScript alert, which can be executed if not properly sanitized."
+      }
+    }
+  ]
+}

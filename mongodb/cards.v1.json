@@ -1,0 +1,208 @@
+{
+  "cards": [
+    {
+      "headline": "Top 10 VS Code Extensions to boost productivity",
+      "tags": "VS Code, Extensions, Productivity",
+      "sheets": [
+        {
+          "title": "Live Server",
+          "tags": "Development, HTML, Refresh",
+          "summary": "You get a local development server for HTML.",
+          "description": "Automatically refreshes your browser to view code changes in real-time, ideal for static HTML development."
+        },
+        {
+          "title": "Tabnine",
+          "tags": "Auto complete, Suggestion, AI",
+          "summary": "You'll experience auto-complete, suggestion, and code block generation.",
+          "description": "This AI-powered extension helps you code faster by auto-completing code and generating code blocks based on natural language comments."
+        },
+        {
+          "title": "Colorize",
+          "tags": "CSS, Color, Hex, RGB, RGBA",
+          "summary": "Visualize CSS colors in your files.",
+          "description": "Generates colored backgrounds for variables holding colors, helping you visualize colors in your code."
+        },
+        {
+          "title": "Prettier - Code Formatter",
+          "tags": "Code, Formatter, Formatting",
+          "summary": "Who doesn't like well-formatted code?",
+          "description": "This extension helps you format code to match common coding styles, supporting multiple languages for cleaner and consistent code."
+        },
+        {
+          "title": "GitLens",
+          "tags": "Git, Source Control, Annotations",
+          "summary": "You'll enhance Git capabilities within VS Code.",
+          "description": "Gain a deeper understanding of code changes and contributors through in-editor annotations, history, comparisons, and Git functionalities."
+        },
+        {
+          "title": "Path Intellisense",
+          "tags": "Path, Intellisense, Autocomplete",
+          "summary": "You'll experience file path autocompletion.",
+          "description": "Autocompletes file paths while coding, improving efficiency and reducing errors."
+        },
+        {
+          "title": "ES7 React/Redux/GraphQL/React-Native snippets",
+          "tags": "React, Redux, GraphQL, React-Native, Snippets",
+          "summary": "Generate boilerplate code with fewer keystrokes.",
+          "description": "Provides snippets to generate base code quickly, allowing you to focus more on functionality than boilerplate."
+        },
+        {
+          "title": "Todo Tree",
+          "tags": "Todo, Comments, Tracking",
+          "summary": "Locate, list, and track your TODO comments.",
+          "description": "Displays TODO comments in a tree view, making it easy for you to navigate and track tasks within your code."
+        },
+        {
+          "title": "Import Cost",
+          "tags": "Import, Bundle Size, Dependencies",
+          "summary": "Know your bundle size while coding.",
+          "description": "Calculates the size of imports and requires in your code editor, helping you control the bundle size early in development."
+        },
+        {
+          "title": "TailwindCSS Intellisense",
+          "tags": "Tailwind CSS, Intellisense, Autocomplete",
+          "summary": "A must-have extension for devs using Tailwind CSS.",
+          "description": "Enhances your Tailwind development experience by providing autocomplete, syntax highlighting, and linting in VS Code."
+        }
+      ]
+    },
+    {
+      "headline": "Top 10 Git Commands Every Developer Should Know",
+      "tags": "Git, Version Control, Commands",
+      "sheets": [
+        {
+          "title": "git init",
+          "tags": "Initialization, Repository",
+          "summary": "Initialize a new Git repository.",
+          "description": "Creates a new local Git repository in the current directory, enabling version control for your project. Example: git init my-project"
+        },
+        {
+          "title": "git clone",
+          "tags": "Clone, Repository",
+          "summary": "Clone an existing Git repository.",
+          "description": "Copies a Git repository from a remote source to your local machine, allowing you to work on the project locally. Example: git clone https://github.com/user/repo.git"
+        },
+        {
+          "title": "git add",
+          "tags": "Staging, Changes",
+          "summary": "Stage changes for commit.",
+          "description": "Adds changes in the working directory to the staging area, preparing them to be included in the next commit. Example: git add ."
+        },
+        {
+          "title": "git commit",
+          "tags": "Commit, Changes",
+          "summary": "Commit staged changes to the repository.",
+          "description": "Records changes from the staging area to the Git repository, creating a new commit with a unique identifier. Example: git commit -m 'Add new feature'"
+        },
+        {
+          "title": "git push",
+          "tags": "Push, Remote",
+          "summary": "Upload local commits to a remote repository.",
+          "description": "Transfers committed changes from your local repository to a remote repository, typically hosted on platforms like GitHub or GitLab. Example: git push origin main"
+        },
+        {
+          "title": "git pull",
+          "tags": "Pull, Remote",
+          "summary": "Fetch and merge changes from a remote repository.",
+          "description": "Fetches changes from a remote repository and merges them into the current branch of your local repository, updating your codebase. Example: git pull origin main"
+        },
+        {
+          "title": "git branch",
+          "tags": "Branch, Workflow",
+          "summary": "Manage branches in the repository.",
+          "description": "Lists, creates, or deletes branches within the Git repository, allowing you to work on different features or versions independently. Example: git branch feature-branch"
+        },
+        {
+          "title": "git checkout",
+          "tags": "Checkout, Branch",
+          "summary": "Switch between branches or restore files.",
+          "description": "Moves the HEAD pointer to a specified branch or restores files to a previous state, enabling you to work on different parts of your project. Example: git checkout main"
+        },
+        {
+          "title": "git merge",
+          "tags": "Merge, Branches",
+          "summary": "Merge changes from one branch into another.",
+          "description": "Combines changes from one branch into another branch, integrating new features or bug fixes into the main codebase. Example: git merge feature-branch"
+        },
+        {
+          "title": "git stash",
+          "tags": "Stash, Changes",
+          "summary": "Temporarily store changes for later use.",
+          "description": "Saves modified or untracked files in a 'stash' and reverts the working directory to the last commit, useful for switching tasks or fixing urgent issues. Example: git stash"
+        }
+      ]
+    },
+    {
+      "headline": "Top 11 VS Code shortcut keys",
+      "tags": "VS Code, Shortcuts, Productivity",
+      "sheets": [
+        {
+          "title": "Ctrl + P / Cmd + P",
+          "tags": "Quick Open, File Search",
+          "summary": "Quickly open files or search within the project.",
+          "description": "Use Ctrl + P on Windows or Cmd + P on Mac to quickly open files or search for files within the project, speeding up navigation and file access."
+        },
+        {
+          "title": "Ctrl + K + C / Cmd + K + C",
+          "tags": "Comment, Toggle",
+          "summary": "Toggle comment for selected code.",
+          "description": "Toggle comments on or off for selected code using Ctrl + K + C on Windows or Cmd + K + C on Mac, improving code readability and organization."
+        },
+        {
+          "title": "Ctrl + K + U / Cmd + K + U",
+          "tags": "Uncomment, Toggle",
+          "summary": "Toggle uncomment for selected code.",
+          "description": "Toggle uncommenting selected code using Ctrl + K + U on Windows or Cmd + K + U on Mac, simplifying code modification and debugging."
+        },
+        {
+          "title": "Ctrl + Shift + P / Cmd + Shift + P",
+          "tags": "Command Palette, Actions",
+          "summary": "Open Command Palette for various actions.",
+          "description": "Open the Command Palette with Ctrl + Shift + P on Windows or Cmd + Shift + P on Mac to access a wide range of commands and actions, enhancing workflow efficiency."
+        },
+        {
+          "title": "Ctrl + Shift + O / Cmd + Shift + O",
+          "tags": "Go to Symbol, Navigate",
+          "summary": "Quickly navigate to symbols within the project.",
+          "description": "Use Ctrl + Shift + O on Windows or Cmd + Shift + O on Mac to quickly navigate to symbols (functions, classes, etc.) within the project, improving code navigation and understanding."
+        },
+        {
+          "title": "Ctrl + K + S / Cmd + K + S",
+          "tags": "Save All, Files",
+          "summary": "Save all open files.",
+          "description": "Save all open files simultaneously with Ctrl + K + S on Windows or Cmd + K + S on Mac, ensuring all changes are saved without manually saving each file."
+        },
+        {
+          "title": "Ctrl + Shift + L / Cmd + Shift + L",
+          "tags": "Select All Occurrences, Multi-cursor",
+          "summary": "Select all occurrences of current word for multi-cursor editing.",
+          "description": "Select all occurrences of the current word for multi-cursor editing with Ctrl + Shift + L on Windows or Cmd + Shift + L on Mac, enhancing efficiency in making bulk changes."
+        },
+        {
+          "title": "Ctrl + Shift + F / Cmd + Shift + F",
+          "tags": "Search, Find in Files",
+          "summary": "Open Search (Find in Files) view.",
+          "description": "Open the Search (Find in Files) view with Ctrl + Shift + F on Windows or Cmd + Shift + F on Mac, facilitating efficient searching and replacing within the project."
+        },
+        {
+          "title": "Ctrl + J / Cmd + J",
+          "tags": "Toggle Terminal, Integrated Terminal",
+          "summary": "Toggle visibility of the Integrated Terminal.",
+          "description": "Toggle the visibility of the Integrated Terminal with Ctrl + J on Windows or Cmd + J on Mac, enabling quick access to the terminal for commands and scripts."
+        },
+        {
+          "title": "Ctrl + D / Cmd + D",
+          "tags": "Multi-cursor Selection",
+          "summary": "Add next occurrence to multi-cursor selection.",
+          "description": "Use Ctrl + D on Windows or Cmd + D on Mac to add the next occurrence of the current word to the multi-cursor selection, streamlining editing tasks and code modifications."
+        },
+        {
+          "title": "Fn + F2",
+          "tags": "Rename Symbol, Refactor",
+          "summary": "Rename symbol or identifier.",
+          "description": "Use Fn + F2 to quickly rename symbols or identifiers across your codebase, improving code maintainability and readability."
+        }
+      ]
+    }
+  ]
+}
